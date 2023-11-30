@@ -1,38 +1,56 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using System;
-using UnityEngine.SceneManagement;
 
-[System.Serializable]
-public class Monster : Info
+public class MonsterInfo : Info
 {
-    public int ID { get; }
-    public string Name { get; }
-    public string Description{ get; }
-    public int Money { get; }
-
-
-    public Monster(int id, int maxHp, int hp,int atk, int moveSpeed, int money, bool isplayer)
-    {
-        ID = id; 
-        MaxHp = maxHp;
-        Hp = hp;
-        Atk = atk;
-        MoveSpeed = moveSpeed;
-        Money = money;
-        IsPlayer = isplayer;
-    }
+    public CharacterType type;
 
     void Start()
     {
-        MaxHp = 100;
-        Hp = 100;
-        Atk = 10;
-        MoveSpeed = 5;
-        IsPlayer = true;   
+        SetMonsterStats();
+        StartCoroutine(ShootProjectiles());
     }
 
+    void SetMonsterStats()
+    {
+        switch (type)
+        {
+            case CharacterType.Monster:
+                MaxHp = 10;
+                Hp = MaxHp;
+                Atk = 5;
+                MoveSpeed = 1;
+                BulletRpm = 60;
+                break;
+            case CharacterType.Boss:
+                MaxHp = 200;
+                Hp = MaxHp;
+                Atk = 10;
+                MoveSpeed = 5;
+                BulletRpm = 120;
+                break;
+        }
+    }
 
+    IEnumerator ShootProjectiles()
+    {
+        while (true)
+        {
+            SpawnProjectile();
+            yield return new WaitForSeconds(60f/BulletRpm);
+        }
+    }
+
+    void SpawnProjectile()
+    {
+        // 몬스터가 탄알을 발사하는 스크립트 가져오기
+        BulletSpawner bulletSpawner = GetComponent<BulletSpawner>();
+
+        if (bulletSpawner != null)
+        {
+            // Atk 값을 전달하여 탄알 발사
+            bulletSpawner.SpawnBullet(Atk);
+        }
+    }
 
 }

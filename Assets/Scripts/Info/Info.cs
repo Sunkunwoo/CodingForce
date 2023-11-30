@@ -5,12 +5,21 @@ using UnityEngine;
 
 public class Info : MonoBehaviour
 {
+    public enum CharacterType
+    {
+        Player,
+        Monster,
+        Boss,
+    }
+
     private float maxHp;
     private float hp;
     private float atk;
     private float moveSpeed;
     private float bulletRpm;
-    private bool isPlayer=false;
+    private CharacterType character;
+
+    public GameObject particlePrefab; // 파티클 프리팹을 Inspector에서 설정
 
     public float MaxHp
     {
@@ -37,23 +46,29 @@ public class Info : MonoBehaviour
         get { return bulletRpm; }
         set { bulletRpm = value; }
     }
-    public bool IsPlayer
+    public CharacterType Character
     {
-        get { return isPlayer; }
-        set { isPlayer = value; }
+        get { return character; }
+        set { character = value; }
     }
-    public void DamegeResult(float damage)
+
+
+    public event Action OnDeath;
+    public void DamageResult(float damage)
     {
         Hp -= damage;
 
         if (Hp <= 0)
         {
-            if (IsPlayer == true)
+            if (Character == CharacterType.Player)
             {
-                GameManager.I.GameOver();
+                GameObject particleEffect = Instantiate(particlePrefab, transform.position, Quaternion.identity);
+                Destroy(gameObject);
+                //GameManager.I.GameOver();
             }
             else
             {
+                OnDeath?.Invoke();
                 Destroy(gameObject);
             }
         }
