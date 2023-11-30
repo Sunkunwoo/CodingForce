@@ -5,6 +5,8 @@ public class SoundManager : MonoBehaviour
     public static SoundManager s;
 
     private AudioSource audioSource;
+    public float bgmsoundvolume = 0.5f;
+    public float fxSoundvolume = 0.5f;
 
     void Awake()
     {
@@ -26,11 +28,34 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    public void PlaySound(AudioClip soundClip)
+    public void PlayFXSound(AudioClip soundClip)
     {
         if (soundClip != null)
         {
-            audioSource.PlayOneShot(soundClip, 0.5f);
+            audioSource.PlayOneShot(soundClip, fxSoundvolume);
+        }
+    }
+
+    public void PlayBgm(AudioClip bgmClip)
+    {
+        if (bgmClip != null)
+        {
+            // 현재 재생 중인 BGM을 중지
+            StopBgm();
+
+            // 새로운 BGM을 설정하고 재생
+            audioSource.clip = bgmClip;
+            audioSource.volume = bgmsoundvolume;
+            audioSource.Play();
+        }
+    }
+
+    public void StopBgm()
+    {
+        // 현재 재생 중인 BGM을 중지
+        if (audioSource.isPlaying)
+        {
+            audioSource.Stop();
         }
     }
 }

@@ -9,6 +9,15 @@ public class MonsterInfo : Info
     {
         SetMonsterStats();
         StartCoroutine(ShootProjectiles());
+        GameObject bgmPlayerBossObject = GameObject.FindGameObjectWithTag("BossBgm");
+        if (bgmPlayerBossObject != null)
+        {
+            bgmPlayerBossObject.SetActive(true);
+        }
+        else
+        {
+            Debug.LogWarning("No GameObject with the tag 'BgmPlayerBoss' found.");
+        }
     }
 
     void SetMonsterStats()
@@ -50,7 +59,7 @@ public class MonsterInfo : Info
         {
             // Atk 값을 전달하여 탄알 발사
             bulletSpawner.SpawnBullet(Atk);
-            SoundManager.s.PlaySound(atkSound);
+            SoundManager.s.PlayFXSound(atkSound);
         }
     }
 }
