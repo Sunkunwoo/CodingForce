@@ -42,7 +42,7 @@ public class Info : MonoBehaviour
         get { return isPlayer; }
         set { isPlayer = value; }
     }
-    public void DeamegeResult(float damage)
+    public void DamegeResult(float damage)
     {
         Hp -= damage;
 
