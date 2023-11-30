@@ -49,7 +49,7 @@ public class MonsterInfo : Info
         if (bulletSpawner != null)
         {
             // Atk 값을 전달하여 탄알 발사
-            bulletSpawner.SpawnProjectile(Atk);
+            bulletSpawner.SpawnBullet(Atk);
         }
     }
 }

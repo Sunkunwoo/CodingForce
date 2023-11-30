@@ -5,7 +5,7 @@ public class BulletSpawner : MonoBehaviour
     public GameObject bulletFabs;
     public Transform spawnPoint;
 
-    public void SpawnProjectile(float atk)
+    public void SpawnBullet(float atk)
     {
         if (bulletFabs != null && spawnPoint != null)
         {
