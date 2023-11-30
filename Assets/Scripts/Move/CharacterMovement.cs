@@ -14,17 +14,6 @@ public class CharacterMovement : MonoBehaviour
         rigidbody = GetComponent<Rigidbody2D>();
     }
 
-    private void Move(Vector2 direction)
-    {
-        moveDirection = direction;
-    }
-
-    private void ApplyMovement(Vector2 direction)
-    {
-        direction *= 5;
-        rigidbody.velocity = direction;
-    }
-
     private void Start()
     {
         controller.OnMoveEvent += Move;
@@ -33,5 +22,16 @@ public class CharacterMovement : MonoBehaviour
     private void FixedUpdate()
     {
         ApplyMovement(moveDirection);
+    }
+
+    private void Move(Vector2 direction)
+    {
+        moveDirection = direction;
+    }
+
+    private void ApplyMovement(Vector2 direction)
+    {
+        direction = direction * 5;
+        rigidbody.velocity = direction;
     }
 }
