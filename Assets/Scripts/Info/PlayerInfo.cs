@@ -5,13 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class PlayerInfo : Info
 {
-    // Start is called before the first frame update
     void Start()
     {
         MaxHp = 100;
         Hp = 100;
+        Atk = 10;
         MoveSpeed = 5;
         BulletRpm = 2;
+        IsPlayer = true;
 
         DontDestroyOnLoad(this.gameObject);
         SceneManager.sceneLoaded += OnSceneLoaded; //다른 씬으로 넘어갈때 쓰이는 sceneLoaded가 호추될때 OnSceneLoaded도 호출 

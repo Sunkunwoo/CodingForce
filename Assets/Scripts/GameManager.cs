@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-        public void GameOver()
+    public void GameOver()
     {
         Time.timeScale = 0f;
     }
