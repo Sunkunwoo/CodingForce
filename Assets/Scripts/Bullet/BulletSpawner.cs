@@ -4,7 +4,17 @@ public class BulletSpawner : MonoBehaviour
 {
     public GameObject bulletFabs;
     public Transform spawnPoint;
+    public float atkValue = 0f;
 
+    private void Start()
+    {
+        InvokeRepeating("SpawnBulletWithAtk", 0f, 0.5f);
+    }
+
+    private void SpawnBulletWithAtk()
+    {
+        SpawnBullet(atkValue);
+    }
     public void SpawnBullet(float atk)
     {
         if (bulletFabs != null && spawnPoint != null)
