@@ -7,12 +7,24 @@ public class PlayerInfo : Info
 {
     void Start()
     {
-        MaxHp = 100;
-        Hp = 100;
-        Atk = 10;
-        MoveSpeed = 5;
-        BulletRpm = 2;
-        Character = CharacterType.Player;
+        if (GameManager.I.isCheat == false)
+        {
+            MaxHp = 100;
+            Hp = 100;
+            Atk = 10;
+            MoveSpeed = 5;
+            BulletRpm = 2;
+            Character = CharacterType.Player;
+        }
+        else
+        {
+            MaxHp = 999999;
+            Hp = 999999;
+            Atk = 100000;
+            MoveSpeed = 50;
+            BulletRpm = 300;
+            Character = CharacterType.Player;
+        }
 
         DontDestroyOnLoad(this.gameObject);
         SceneManager.sceneLoaded += OnSceneLoaded; //다른 씬으로 넘어갈때 쓰이는 sceneLoaded가 호추될때 OnSceneLoaded도 호출 

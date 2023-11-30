@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public int stage=1;
     public int sccore;
+    public bool isCheat = false;
 
     public static GameManager I;
 
