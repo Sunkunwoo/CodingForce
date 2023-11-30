@@ -421,6 +421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8bf568580db70d48884117cba30fa07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dmg: 0
 --- !u!1 &1010478796
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,6 +455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a673fef9454b4cb4ab80745465a64f63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particlePrefab: {fileID: 0}
   type: 1
 --- !u!70 &1010478798
 CapsuleCollider2D:
@@ -597,7 +599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7ca573227c6f1e47984c8b3ffe183bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 0}
+  bulletFabs: {fileID: 0}
   spawnPoint: {fileID: 563209783}
 --- !u!1 &1247844688
 GameObject:
@@ -645,6 +647,80 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage: 1
   sccore: 0
+  isCheat: 0
+--- !u!1001 &1725206006
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3062768086386128151, guid: 14894a0eb5489e84990a0aa2392f1b2d, type: 3}
+      propertyPath: m_Name
+      value: Item1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618837771175819169, guid: 14894a0eb5489e84990a0aa2392f1b2d, type: 3}
+      propertyPath: m_Radius
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618837771175819169, guid: 14894a0eb5489e84990a0aa2392f1b2d, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618837771175819169, guid: 14894a0eb5489e84990a0aa2392f1b2d, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6533604868850584262, guid: 14894a0eb5489e84990a0aa2392f1b2d, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6533604868850584262, guid: 14894a0eb5489e84990a0aa2392f1b2d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6533604868850584262, guid: 14894a0eb5489e84990a0aa2392f1b2d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.615915
+      objectReference: {fileID: 0}
+    - target: {fileID: 6533604868850584262, guid: 14894a0eb5489e84990a0aa2392f1b2d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6533604868850584262, guid: 14894a0eb5489e84990a0aa2392f1b2d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6533604868850584262, guid: 14894a0eb5489e84990a0aa2392f1b2d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6533604868850584262, guid: 14894a0eb5489e84990a0aa2392f1b2d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6533604868850584262, guid: 14894a0eb5489e84990a0aa2392f1b2d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6533604868850584262, guid: 14894a0eb5489e84990a0aa2392f1b2d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6533604868850584262, guid: 14894a0eb5489e84990a0aa2392f1b2d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6533604868850584262, guid: 14894a0eb5489e84990a0aa2392f1b2d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 14894a0eb5489e84990a0aa2392f1b2d, type: 3}
 --- !u!1 &1889952505
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,6 +780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cc1e6ee2c4fbc74d8c3a501444cb7f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particlePrefab: {fileID: 0}
 --- !u!58 &1889952508
 CircleCollider2D:
   m_ObjectHideFlags: 0
