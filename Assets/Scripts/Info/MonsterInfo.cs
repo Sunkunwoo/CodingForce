@@ -36,20 +36,21 @@ public class MonsterInfo : Info
     {
         while (true)
         {
-            SpawnProjectile();
+            SpawnBullet();
             yield return new WaitForSeconds(60f/BulletRpm);
         }
     }
 
-    void SpawnProjectile()
+    void SpawnBullet()
     {
         // 몬스터가 탄알을 발사하는 스크립트 가져오기
-        BulletSpawner bulletSpawner = GetComponent<BulletSpawner>();
+        BulletSpawner bulletSpawner= GetComponent<BulletSpawner>();
 
         if (bulletSpawner != null)
         {
             // Atk 값을 전달하여 탄알 발사
             bulletSpawner.SpawnBullet(Atk);
+            SoundManager.s.PlaySound(atkSound);
         }
     }
 }
