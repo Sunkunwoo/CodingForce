@@ -12,7 +12,7 @@ public class PlayerInfo : Info
         Atk = 10;
         MoveSpeed = 5;
         BulletRpm = 2;
-        IsPlayer = true;
+        Character = CharacterType.Player;
 
         DontDestroyOnLoad(this.gameObject);
         SceneManager.sceneLoaded += OnSceneLoaded; //다른 씬으로 넘어갈때 쓰이는 sceneLoaded가 호추될때 OnSceneLoaded도 호출 

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public int stage=1;
+    public int sccore;
+
     public static GameManager I;
 
     void Awake()
@@ -16,4 +19,5 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0f;
     }
+
 }
