@@ -19,6 +19,8 @@ public class Info : MonoBehaviour
     private float bulletRpm;
     private CharacterType character;
 
+    public GameObject particlePrefab; // 파티클 프리팹을 Inspector에서 설정
+
     public float MaxHp
     {
         get { return maxHp; }
@@ -59,7 +61,9 @@ public class Info : MonoBehaviour
         {
             if (Character == CharacterType.Player)
             {
-                GameManager.I.GameOver();
+                GameObject particleEffect = Instantiate(particlePrefab, transform.position, Quaternion.identity);
+                Destroy(gameObject);
+                //GameManager.I.GameOver();
             }
             else
             {
