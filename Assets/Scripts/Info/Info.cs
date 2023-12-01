@@ -9,8 +9,14 @@ public class Info : MonoBehaviour
     public enum CharacterType
     {
         Player,
-        Monster,
-        Boss,
+        Monster1,
+        Monster2,
+        Monster3,
+        Monster4,
+        Monster5,
+        Boss1,
+        Boss2,
+        Boss3,
     }
 
     private float maxHp;
@@ -52,6 +58,7 @@ public class Info : MonoBehaviour
         get { return character; }
         set { character = value; }
     }
+
 
     public event Action OnDeath;
     public void DamageResult(float damage)
