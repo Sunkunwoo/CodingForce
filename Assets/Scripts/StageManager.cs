@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class StageManager : MonoBehaviour
 {
     public GameObject spwanMonster;
+    public GameObject spwanMonster2;
+    public GameObject spwanMonster3;
     public GameObject bossSpwan;
     public GameObject txtUi;
     float spwanTime;
@@ -39,7 +41,26 @@ public class StageManager : MonoBehaviour
     {
         if (GameManager.I.sccore < stageTargetPoint)
         {
-            Instantiate(spwanMonster);
+            int spawnsDice = Random.Range(1, 10);
+            switch (spawnsDice)
+            {
+                case 1:
+                case 2:
+                case 3:
+                    Instantiate(spwanMonster);
+                    break;
+                case 4:
+                case 5:
+                case 6:
+                    Instantiate(spwanMonster2);
+                    break;
+                case 7:
+                case 8:
+                case 9:
+                    Instantiate(spwanMonster3);
+                    break;
+
+            }
         }
         else
         {
