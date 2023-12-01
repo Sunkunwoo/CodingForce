@@ -4,10 +4,11 @@ public class BulletSpawner : MonoBehaviour
 {
     public GameObject bulletFabs;
     public Transform spawnPoint;
-    public float atkValue = 0f;
+    float atkValue;
 
     private void Start()
     {
+        atkValue = GetComponent<Info>().Atk;
         InvokeRepeating("SpawnBulletWithAtk", 0f, 0.5f);
     }
 

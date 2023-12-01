@@ -10,9 +10,9 @@ public class StageManager : MonoBehaviour
     public GameObject spwanMonster3;
     public GameObject bossSpwan;
     public GameObject txtUi;
+    public GameObject ObjectSpawner;
     float spwanTime;
     int stageNumber;
-    int maxMonster;
     int targetKill;
 
     // Start is called before the first frame update
@@ -37,6 +37,7 @@ public class StageManager : MonoBehaviour
         }
         InvokeRepeating("Spawns", 0.5f, spwanTime);
         InvokeRepeating("ClearStage", 0, 1f);
+        Instantiate(ObjectSpawner);
     }
 
     void Spawns()
@@ -66,19 +67,20 @@ public class StageManager : MonoBehaviour
                         GameManager.I.SpwanCount++;
                         Instantiate(spwanMonster3);
                         break;
-
                 }
             }
-            else;
+            else
             {
-                Debug.Log("积己 力茄 檬苞");
+                Instantiate(bossSpwan);
+                CancelInvoke("Spawns");
             }
+
         }
-        else
+        else;
         {
-            Instantiate(bossSpwan);
-            CancelInvoke("Spawns");
+            Debug.Log("积己 力茄 檬苞");
         }
+
     }
 
     void ClearStage()

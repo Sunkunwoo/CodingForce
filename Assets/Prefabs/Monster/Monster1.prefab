@@ -14,8 +14,7 @@ GameObject:
   - component: {fileID: 7950412795740073195}
   - component: {fileID: 6347377731708278490}
   - component: {fileID: 1805205457566771444}
-  - component: {fileID: 4630493755393785832}
-  - component: {fileID: -6547942275447563672}
+  - component: {fileID: -2006650008278474559}
   m_Layer: 0
   m_Name: Monster1
   m_TagString: Monster
@@ -37,7 +36,7 @@ Transform:
   m_Children:
   - {fileID: 2596596174637535006}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3232784278497114295
 SpriteRenderer:
@@ -180,7 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 063199cfa7140bd4892cef33f2e10421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4630493755393785832
+--- !u!114 &-2006650008278474559
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -194,18 +193,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bullet: {fileID: 3294404223877578590, guid: 2753b4e4b9b50eb4b8232f75b6ad9430, type: 3}
   spawnPoint: {fileID: 3814330368557051088}
---- !u!114 &-6547942275447563672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3144070592684821593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 423e32b2e9dfb67499a21078082756dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5911083354898893632
 GameObject:
   m_ObjectHideFlags: 0

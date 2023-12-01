@@ -6,7 +6,8 @@ TagManager:
   tags:
   - User
   - Monster
-  - BossBgm
+  - BgmPlayer
+  - Mbullet
   layers:
   - Default
   - TransparentFX

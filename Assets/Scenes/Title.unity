@@ -563,7 +563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage: 1
   sccore: 0
-  isCheat: 0
+  isCheat: 1
   killCount: 0
   SpwanCount: 0
 --- !u!1 &1582571078
@@ -769,6 +769,7 @@ MonoBehaviour:
   scoreTxt: {fileID: 5825495875887952459}
   hpTxt: {fileID: 8097386145836164008}
   stageTxt: {fileID: 5136569886501102748}
+  player: {fileID: 6598813770665430342}
 --- !u!4 &895069451341618652
 Transform:
   m_ObjectHideFlags: 0
@@ -777,7 +778,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6598813770665430342}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.36, y: -1.44, z: 0}
+  m_LocalPosition: {x: -0.07, y: 4.85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -930,9 +931,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e67e5c32879b42e48b9344deea0c104a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletFabs: {fileID: 0}
-  spawnPoint: {fileID: 0}
-  atkValue: 0
+  bulletFabs: {fileID: 3294404223877578590, guid: 2257bae56ab7d814e9de0c79be48b413, type: 3}
+  spawnPoint: {fileID: 895069451341618652}
 --- !u!224 &4827707859635687380
 RectTransform:
   m_ObjectHideFlags: 0

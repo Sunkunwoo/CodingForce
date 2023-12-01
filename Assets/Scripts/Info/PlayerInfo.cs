@@ -25,8 +25,6 @@ public class PlayerInfo : Info
             BulletRpm = 300;
             Character = CharacterType.Player;
         }
-        GameManager.I.PlayerPos = GetComponent<Transform>();
-        GameManager.I._Playerinfo = this;
         DontDestroyOnLoad(this.gameObject);
         SceneManager.sceneLoaded += OnSceneLoaded; //다른 씬으로 넘어갈때 쓰이는 sceneLoaded가 호추될때 OnSceneLoaded도 호출 
         gameObject.SetActive(false);
@@ -42,4 +40,7 @@ public class PlayerInfo : Info
             gameObject.SetActive(true);
         }    
     }
+
+
+
 }
