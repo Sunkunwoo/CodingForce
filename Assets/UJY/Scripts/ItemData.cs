@@ -17,8 +17,8 @@ public class ItemData : MonoBehaviour
 
     void Start()
     {
-        float x = Random.Range(-10f, 10f);
-        float y = Random.Range(0f, 10f);
+        float x = Random.Range(-8f, 8f);
+        float y = Random.Range(6f, 7f);
         transform.position = new Vector3(x, y, 0);
 
     }
@@ -27,8 +27,6 @@ public class ItemData : MonoBehaviour
     {
      
     }
-
-
 
     private void OnTriggerEnter2D(Collider2D other)
     {

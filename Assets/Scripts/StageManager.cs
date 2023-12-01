@@ -10,6 +10,7 @@ public class StageManager : MonoBehaviour
     public GameObject spwanMonster3;
     public GameObject bossSpwan;
     public GameObject txtUi;
+    public GameObject ItemSpawn;
     float spwanTime;
     int stageNumber;
     int maxMonster;
@@ -37,6 +38,7 @@ public class StageManager : MonoBehaviour
         }
         InvokeRepeating("Spawns", 0.5f, spwanTime);
         InvokeRepeating("ClearStage", 0, 1f);
+        Instantiate(ItemSpawn);
     }
 
     void Spawns()
