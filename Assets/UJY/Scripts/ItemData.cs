@@ -10,7 +10,7 @@ public class ItemData : MonoBehaviour
     public GameObject Banana;
     public GameObject Kiwi;
     public GameObject Pineapple;
-    public GameObject Mellon;
+    public GameObject Melon;
 
     //public AudioClip ItemSound;
 
@@ -18,14 +18,9 @@ public class ItemData : MonoBehaviour
     void Start()
     {
         float x = Random.Range(-8f, 8f);
-        float y = Random.Range(6f, 7f);
+        float y = 4;
         transform.position = new Vector3(x, y, 0);
 
-    }
-
-    void Update()
-    {
-     
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -43,10 +38,9 @@ public class ItemData : MonoBehaviour
                     playerInfo.GetItem(3);
                 else if (gameObject == Pineapple)
                     playerInfo.GetItem(4);
-                else if (gameObject == Mellon)
+                else if (gameObject == Melon)
                     playerInfo.GetItem(5);
 
-                Destroy(gameObject);
                 Debug.Log("아이템 획득");
             }
             else
@@ -54,8 +48,9 @@ public class ItemData : MonoBehaviour
                 Debug.LogError("'User' 태그를 가진 객체에서 Info 컴포넌트를 찾을 수 없습니다.");
             }
         }
-     
+
 
     }
+
 
 }

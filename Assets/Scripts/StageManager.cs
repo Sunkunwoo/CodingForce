@@ -10,7 +10,7 @@ public class StageManager : MonoBehaviour
     public GameObject spwanMonster3;
     public GameObject bossSpwan;
     public GameObject txtUi;
-    public GameObject ItemSpawn;
+    public GameObject ObjectSpawner;
     float spwanTime;
     int stageNumber;
     int maxMonster;
@@ -38,7 +38,7 @@ public class StageManager : MonoBehaviour
         }
         InvokeRepeating("Spawns", 0.5f, spwanTime);
         InvokeRepeating("ClearStage", 0, 1f);
-        Instantiate(ItemSpawn);
+        Instantiate(ObjectSpawner);
     }
 
     void Spawns()
@@ -71,7 +71,7 @@ public class StageManager : MonoBehaviour
 
                 }
             }
-            else;
+            else
             {
                 Debug.Log("생성 제한 초과");
             }

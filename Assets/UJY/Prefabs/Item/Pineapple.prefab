@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3064998211747871523}
   - component: {fileID: 2521013930279442138}
   - component: {fileID: 3710245110399533688}
+  - component: {fileID: -7148532944604516063}
   m_Layer: 0
   m_Name: Pineapple
   m_TagString: Untagged
@@ -143,7 +144,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -165,4 +166,16 @@ MonoBehaviour:
   Banana: {fileID: 342697243859752344, guid: 991e0e97d9434594b90bfb67a6bdbd29, type: 3}
   Kiwi: {fileID: 2025522947727327946, guid: c196f7fad5429074fabc118f46e3892a, type: 3}
   Pineapple: {fileID: 5947074191372668158}
-  Mellon: {fileID: 5634722634605835825, guid: 720776e482aafc74a8aba8c129007b2a, type: 3}
+  Melon: {fileID: 5634722634605835825, guid: 720776e482aafc74a8aba8c129007b2a, type: 3}
+--- !u!114 &-7148532944604516063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5947074191372668158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cf59896a150f794d9fe9b981fce34cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
