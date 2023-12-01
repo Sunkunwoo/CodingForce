@@ -18,17 +18,59 @@ public class MonsterInfo : Info
     {
         switch (type)
         {
-            case CharacterType.Monster:
+            case CharacterType.Monster1:
+                MaxHp = 20;
+                Hp = MaxHp;
+                Atk = 10;
+                MoveSpeed = 2;
+                BulletRpm = 60;
+                break;
+            case CharacterType.Monster2:
+                MaxHp = 50;
+                Hp = MaxHp;
+                Atk = 3;
+                MoveSpeed = 1;
+                BulletRpm = 120;
+                break;
+            case CharacterType.Monster3:
                 MaxHp = 10;
                 Hp = MaxHp;
-                Atk = 5;
+                Atk = 20;
+                MoveSpeed = 4;
+                BulletRpm = 20;
+                break;
+            case CharacterType.Monster4:
+                MaxHp = 10;
+                Hp = MaxHp;
+                Atk = 1;
                 MoveSpeed = 1;
                 BulletRpm = 60;
                 break;
-            case CharacterType.Boss:
+            case CharacterType.Monster5:
+                MaxHp = 100;
+                Hp = MaxHp;
+                Atk = 15;
+                MoveSpeed = 2;
+                BulletRpm = 60;
+                break;
+            case CharacterType.Boss1:
                 MaxHp = 200;
                 Hp = MaxHp;
                 Atk = 10;
+                MoveSpeed = 5;
+                BulletRpm = 120;
+                break;
+            case CharacterType.Boss2:
+                MaxHp = 250;
+                Hp = MaxHp;
+                Atk = 15;
+                MoveSpeed = 5;
+                BulletRpm = 120;
+                break;
+            case CharacterType.Boss3:
+                MaxHp = 300;
+                Hp = MaxHp;
+                Atk = 20;
                 MoveSpeed = 5;
                 BulletRpm = 120;
                 break;
@@ -56,4 +98,5 @@ public class MonsterInfo : Info
             SoundManager.s.PlayFXSound(atkSound);
         }
     }
+
 }

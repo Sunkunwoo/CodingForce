@@ -16,11 +16,29 @@ public class AddScore : MonoBehaviour
         {
             switch (_info.Character)
             {
-                case Info.CharacterType.Monster:
+                case Info.CharacterType.Monster1:
                     GameManager.I.sccore += 10;
                     break;
+                case Info.CharacterType.Monster2:
+                    GameManager.I.sccore += 10;
+                    break;
+                case Info.CharacterType.Monster3:
+                    GameManager.I.sccore += 10;
+                    break;
+                case Info.CharacterType.Monster4:
+                    GameManager.I.sccore += 2;
+                    break;
+                case Info.CharacterType.Monster5:
+                    GameManager.I.sccore += 30;
+                    break;
 
-                case Info.CharacterType.Boss:
+                case Info.CharacterType.Boss1:
+                    GameManager.I.sccore += 50;
+                    break;
+                case Info.CharacterType.Boss2:
+                    GameManager.I.sccore += 50;
+                    break;
+                case Info.CharacterType.Boss3:
                     GameManager.I.sccore += 50;
                     break;
             }
