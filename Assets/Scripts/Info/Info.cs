@@ -82,4 +82,19 @@ public class Info : MonoBehaviour
             }
         }
     }
+    public void GetItem(int type)
+    {
+        if (type == 0)
+            Hp += 10;
+        else if (type == 1)
+            Atk += 2;
+        if (type == 2)
+            MoveSpeed += 1;
+        if (type == 3)
+            BulletRpm += 10;
+        if (type == 4)
+            Hp += 10;
+
+    }
+
 }

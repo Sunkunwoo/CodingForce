@@ -40,4 +40,7 @@ public class PlayerInfo : Info
             gameObject.SetActive(true);
         }    
     }
+
+
+
 }
