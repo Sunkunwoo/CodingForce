@@ -5,8 +5,9 @@ using UnityEngine.InputSystem;
 
 public class CharacterMove : CharacterController
 {
-    public void OnMovePlayer(InputValue input)
+    public void OnMove(InputValue input)
     {
+        Debug.Log("OnMove" + input.ToString());
         Vector2 moveInput = input.Get<Vector2>().normalized;
         InvokeMoveEvent(moveInput);
     }
