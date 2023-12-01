@@ -14,6 +14,9 @@ public class BgmPlayer : MonoBehaviour
         {
             audioSource = gameObject.AddComponent<AudioSource>(); // AudioSource가 없으면 추가
         }
+        audioSource.volume = SoundManager.s.bgmsoundvolume;
+        audioSource.clip = audioClip;
+        audioSource.loop = true;
         SoundManager.s.PlayBgm(audioClip);
     }
 }
