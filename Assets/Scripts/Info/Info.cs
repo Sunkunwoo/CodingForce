@@ -75,6 +75,8 @@ public class Info : MonoBehaviour
             }
             else
             {
+                GameManager.I.killCount++;
+                GameManager.I.SpwanCount--;
                 OnDeath?.Invoke();
                 Destroy(gameObject);
             }

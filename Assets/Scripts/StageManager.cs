@@ -11,25 +11,27 @@ public class StageManager : MonoBehaviour
     public GameObject bossSpwan;
     public GameObject txtUi;
     float spwanTime;
-    int stageTargetPoint;
     int stageNumber;
+    int maxMonster;
+    int targetKill;
 
     // Start is called before the first frame update
     void Start()
     {
+        GameManager.I.killCount = 0;
         stageNumber = GameManager.I.stage;
         switch (stageNumber)
         {
             case 1:
-                stageTargetPoint = 100;
                 spwanTime = 5;
+                targetKill = 10;
                 break;
             case 2:
-                stageTargetPoint = 300;
+                targetKill = 20;
                 spwanTime = 3;
                 break;
             case 3:
-                stageTargetPoint = 600;
+                targetKill = 30;
                 spwanTime = 2;
                 break;
         }
@@ -39,27 +41,37 @@ public class StageManager : MonoBehaviour
 
     void Spawns()
     {
-        if (GameManager.I.sccore < stageTargetPoint)
+        if (GameManager.I.SpwanCount < 10)
         {
-            int spawnsDice = Random.Range(1, 10);
-            switch (spawnsDice)
+            if (GameManager.I.killCount <= targetKill)
             {
-                case 1:
-                case 2:
-                case 3:
-                    Instantiate(spwanMonster);
-                    break;
-                case 4:
-                case 5:
-                case 6:
-                    Instantiate(spwanMonster2);
-                    break;
-                case 7:
-                case 8:
-                case 9:
-                    Instantiate(spwanMonster3);
-                    break;
+                int spawnsDice = Random.Range(1, 10);
+                switch (spawnsDice)
+                {
+                    case 1:
+                    case 2:
+                    case 3:
+                        GameManager.I.SpwanCount++;
+                        Instantiate(spwanMonster);
+                        break;
+                    case 4:
+                    case 5:
+                    case 6:
+                        GameManager.I.SpwanCount++;
+                        Instantiate(spwanMonster2);
+                        break;
+                    case 7:
+                    case 8:
+                    case 9:
+                        GameManager.I.SpwanCount++;
+                        Instantiate(spwanMonster3);
+                        break;
 
+                }
+            }
+            else;
+            {
+                Debug.Log("생성 제한 초과");
             }
         }
         else

@@ -45,5 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spwanMonster: {fileID: 0}
+  spwanMonster2: {fileID: 0}
+  spwanMonster3: {fileID: 0}
   bossSpwan: {fileID: 0}
   txtUi: {fileID: 0}

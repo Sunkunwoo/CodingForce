@@ -4,17 +4,22 @@ namespace other
 {
     public class LookAtPlayer : MonoBehaviour
     {
-        public Transform Target;
-
         private void Update()
         {
-            Vector3 direction = Target.position - transform.position;
+            // GameManager의 인스턴스를 얻어옴
+            GameManager gameManager = GameManager.I;
 
-            float angle = DirectionToAngle(direction);
+            // GameManager의 Player 속성을 참조
+            Transform target = gameManager.player as Transform;
 
-            transform.rotation = Quaternion.Euler(0, 0, angle);
+            if (target != null)
+            {
+                Vector3 direction = target.position - transform.position;
+                float angle = DirectionToAngle(direction);
+                transform.rotation = Quaternion.Euler(0, 0, angle);
+            }
         }
-        
+
         private float DirectionToAngle(Vector3 direction)
         {
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
