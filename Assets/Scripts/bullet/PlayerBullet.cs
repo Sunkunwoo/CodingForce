@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class BulletSpawner : MonoBehaviour
+public class PlayerBullet : MonoBehaviour
 {
     public GameObject bulletFabs;
     public Transform spawnPoint;
@@ -23,7 +23,7 @@ public class BulletSpawner : MonoBehaviour
             Debug.Log("탄환생성");
 
             // 탄알 스크립트 가져오기
-            BulletController bulletController = bullet.GetComponent<BulletController>();
+            BulletController2 bulletController = bullet.GetComponent<BulletController2>();
 
             if (bulletController != null)
             {

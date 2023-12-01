@@ -6,8 +6,7 @@ TagManager:
   tags:
   - User
   - Monster
-  - BossBgm
-  - Collision
+  - BgmPlayer
   layers:
   - Default
   - TransparentFX

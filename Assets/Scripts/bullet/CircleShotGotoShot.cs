@@ -11,44 +11,54 @@ public class CircleShotGotoShot : MonoBehaviour
     public Transform spawnPoint;
     //발사될 총알 오브젝트
     public GameObject Bullet;
-
+    private float atkValue = 0;
     private void Start()
     {
-        InvokeRepeating("Shoot", 0f, 0.5f);
+        InvokeRepeating("ShootWithATK", 0f, 0.5f);
+    }
+    private void ShootWithATK()
+    {
+        Shoot(atkValue);
     }
 
-    private void Update()
+    private void Shoot(float atk)
     {
 
-    }
-
-    private void Shoot()
-    {
-        //Target방향으로 발사될 오브젝트 수록
-        List<Transform> bullets = new List<Transform>();
-
-        for (int i = 0; i < 360; i += 13)
+        if (Bullet != null && spawnPoint != null)
         {
-            //총알 생성
-            GameObject temp = Instantiate(Bullet);
+            //Target방향으로 발사될 오브젝트 수록
+            List<Transform> bullets = new List<Transform>();
 
-            //2초후 삭제
-            Destroy(temp, 2f);
+            for (int i = 0; i < 360; i += 13)
+            {
+                //총알 생성
+                GameObject temp = Instantiate(Bullet);
 
-            //총알 생성 위치를 (0,0) 좌표로 한다.
-            temp.transform.position = spawnPoint.position;
+                //2초후 삭제
+                Destroy(temp, 2f);
 
-            //?초후에 Target에게 날아갈 오브젝트 수록
-            bullets.Add(temp.transform);
+                //총알 생성 위치를 (0,0) 좌표로 한다.
+                temp.transform.position = spawnPoint.position;
 
-            //Z에 값이 변해야 회전이 이루어지므로, Z에 i를 대입한다.
-            temp.transform.rotation = Quaternion.Euler(0, 0, i);
+                //?초후에 Target에게 날아갈 오브젝트 수록
+                bullets.Add(temp.transform);
+
+                //Z에 값이 변해야 회전이 이루어지므로, Z에 i를 대입한다.
+                temp.transform.rotation = Quaternion.Euler(0, 0, i);
+
+                // 탄알 스크립트 가져오기
+                BulletController bulletController = temp.GetComponent<BulletController>();
+
+                if (bulletController != null)
+                {
+                    // Atk 값을 전달하여 탄알 초기화
+                    bulletController.Initialize(atk);
+                }
+            }
+            //총알을 Target 방향으로 이동시킨다.
+            StartCoroutine(BulletToTarget(bullets));
         }
-
-        //총알을 Target 방향으로 이동시킨다.
-        StartCoroutine(BulletToTarget(bullets));
     }
-
     private IEnumerator BulletToTarget(IList<Transform> objects)
     {
         //0.5초 후에 시작

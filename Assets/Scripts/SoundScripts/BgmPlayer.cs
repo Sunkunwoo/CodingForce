@@ -7,7 +7,7 @@ public class BgmPlayer : MonoBehaviour
     public AudioClip audioClip; // AudioClip으로 수정
     private AudioSource audioSource; // AudioSource 추가
 
-    void Start()
+    protected virtual void Start()
     {
         audioSource = GetComponent<AudioSource>(); // AudioSource를 가져옴
         if (audioSource == null)
