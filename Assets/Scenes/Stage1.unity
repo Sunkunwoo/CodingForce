@@ -345,6 +345,55 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3ecde31532d9154b9de59b33158fac5, type: 3}
+--- !u!1 &315365924
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 315365925}
+  - component: {fileID: 315365926}
+  m_Layer: 0
+  m_Name: ItemSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &315365925
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315365924}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.135467, y: -0.21991038, z: -0.09508167}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1110141484}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &315365926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315365924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37a677e30507e704092551e5b3599b72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Apple: {fileID: 0}
+  Banana: {fileID: 0}
+  Kiwi: {fileID: 0}
+  Pineapple: {fileID: 0}
+  Mellon: {fileID: 0}
 --- !u!1 &387221358
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,11 +470,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 387221358}
   m_CullTransparentMesh: 1
---- !u!4 &509560769 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7270107566069893458, guid: f9046819aa53da34c96db6c26a5d25c8, type: 3}
-  m_PrefabInstance: {fileID: 1578188273}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &667648420
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,7 +623,6 @@ MonoBehaviour:
   stage: 1
   sccore: 0
   isCheat: 1
-  player: {fileID: 509560769}
 --- !u!4 &1110141484
 Transform:
   m_ObjectHideFlags: 0
@@ -591,7 +634,8 @@ Transform:
   m_LocalPosition: {x: -5.797636, y: 0.79653287, z: 0.07385728}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 315365925}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1049,6 +1093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 063199cfa7140bd4892cef33f2e10421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Target: {fileID: 0}
 --- !u!114 &8000070434495138127
 MonoBehaviour:
   m_ObjectHideFlags: 0
