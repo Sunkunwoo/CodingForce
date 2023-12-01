@@ -304,7 +304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 579bb3aaf263101479038252d1386a8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundClip: {fileID: 0}
+  soundClip: {fileID: 8300000, guid: af2435b78ba5d44beab25e91ad49efb7, type: 3}
 --- !u!1 &736304535
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,6 +564,8 @@ MonoBehaviour:
   stage: 1
   sccore: 0
   isCheat: 0
+  killCount: 0
+  SpwanCount: 0
 --- !u!1 &1582571078
 GameObject:
   m_ObjectHideFlags: 0

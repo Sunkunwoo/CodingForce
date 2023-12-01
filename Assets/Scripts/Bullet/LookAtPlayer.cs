@@ -10,7 +10,7 @@ namespace other
             GameManager gameManager = GameManager.I;
 
             // GameManager의 Player 속성을 참조
-            Transform target = gameManager.player as Transform;
+            Transform target = gameManager.PlayerPos as Transform;
 
             if (target != null)
             {
