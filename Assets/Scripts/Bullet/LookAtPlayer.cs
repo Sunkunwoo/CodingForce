@@ -4,7 +4,6 @@ namespace other
 {
     public class LookAtPlayer : MonoBehaviour
     {
-        [Tooltip("바라볼 물체이다. - > 주로 플레이어를 참조하면 된다.")]
         public Transform Target;
 
         private void Update()

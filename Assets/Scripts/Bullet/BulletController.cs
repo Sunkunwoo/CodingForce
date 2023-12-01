@@ -26,7 +26,7 @@ public class BulletController : MonoBehaviour
             {
                 playerInfo.DamageResult(dmg);
                 Destroy(gameObject);
-                Debug.Log(dmg + "남은 채력" + playerInfo.Hp);
+                Debug.Log(dmg + "데미지!! " + "플레이어의 남은 체력" + playerInfo.Hp);
             }
             else
             {

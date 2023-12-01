@@ -44,8 +44,8 @@ GameObject:
   - component: {fileID: 3136434207350658543}
   - component: {fileID: 3992729967779576508}
   - component: {fileID: 4014606368208910448}
-  - component: {fileID: 7744782013650784113}
   - component: {fileID: 4644181437248007378}
+  - component: {fileID: 1889063063980424041}
   m_Layer: 0
   m_Name: Monster2
   m_TagString: Monster
@@ -198,21 +198,6 @@ MonoBehaviour:
   atkSound: {fileID: 8300000, guid: 622cdecfcf58444d7be5352e4209020a, type: 3}
   particlePrefab: {fileID: 7187897924225069257, guid: 2b0060591b69ca94bb3ce7c5b589485f, type: 3}
   type: 1
---- !u!114 &7744782013650784113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7384675972166586126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e67e5c32879b42e48b9344deea0c104a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletFabs: {fileID: 3294404223877578590, guid: 2753b4e4b9b50eb4b8232f75b6ad9430, type: 3}
-  spawnPoint: {fileID: 2008464477764900410}
-  atkValue: 0
 --- !u!114 &4644181437248007378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,3 +211,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 7270107566069893458, guid: f9046819aa53da34c96db6c26a5d25c8, type: 3}
+--- !u!114 &1889063063980424041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7384675972166586126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdba24569f388644caf72cd138027744, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 7270107566069893458, guid: f9046819aa53da34c96db6c26a5d25c8, type: 3}
+  spawnPoint: {fileID: 1693142676578554644}
+  Bullet: {fileID: 3294404223877578590, guid: 2753b4e4b9b50eb4b8232f75b6ad9430, type: 3}
