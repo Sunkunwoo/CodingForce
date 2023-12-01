@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class CircleShotGotoShot : MonoBehaviour
 {
+    public AudioClip trickatkSound;
     //총알을 생성후 Target에게 날아갈 변수
     public Transform Target;
     public Transform spawnPoint;
@@ -14,6 +15,9 @@ public class CircleShotGotoShot : MonoBehaviour
     private float atkValue = 0;
     private void Start()
     {
+        trickatkSound = GetComponent<Info>().atkSound;
+        GameObject userObject = GameObject.FindWithTag("User");
+        Target = userObject.transform;
         InvokeRepeating("ShootWithATK", 0f, 0.5f);
     }
     private void ShootWithATK()
@@ -23,7 +27,7 @@ public class CircleShotGotoShot : MonoBehaviour
 
     private void Shoot(float atk)
     {
-
+        SoundManager.s.PlayFXSound(trickatkSound);
         if (Bullet != null && spawnPoint != null)
         {
             //Target방향으로 발사될 오브젝트 수록

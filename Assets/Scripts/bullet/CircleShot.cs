@@ -3,13 +3,14 @@
 
 public class CircleShot : MonoBehaviour
 {
-
+    public AudioClip trickatkSound;
     //발사될 총알 오브젝트
     public GameObject Bullet;
     public Transform spawnPoint;
     private float atkValue = 10;
     private void Start()
     {
+        trickatkSound = GetComponent<Info>().atkSound;
         InvokeRepeating("ShootWithATK", 0f, 0.5f);
     }
     private void ShootWithATK()
@@ -19,7 +20,7 @@ public class CircleShot : MonoBehaviour
 
     private void Shoot(float atk)
     {
-
+        SoundManager.s.PlayFXSound(trickatkSound);
         if (Bullet != null && spawnPoint != null)
         {
             //360번 반복
