@@ -6,14 +6,14 @@ namespace other
     {
         private void Update()
         {
-            // GameManager의 인스턴스를 얻어옴
-            GameManager gameManager = GameManager.I;
+            // User 태그를 가진 오브젝트를 찾음
+            GameObject userObject = GameObject.FindWithTag("User");
 
-            // GameManager의 Player 속성을 참조
-            Transform target = gameManager.PlayerPos as Transform;
-
-            if (target != null)
+            if (userObject != null)
             {
+                // 찾은 오브젝트의 Transform을 가져와서 바라보기
+                Transform target = userObject.transform;
+
                 Vector3 direction = target.position - transform.position;
                 float angle = DirectionToAngle(direction);
                 transform.rotation = Quaternion.Euler(0, 0, angle);

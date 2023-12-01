@@ -7,15 +7,8 @@ public class GameManager : MonoBehaviour
     public int stage=1;
     public int sccore;
     public bool isCheat = false;
-    Transform playerPos;
     public int killCount;
     public int SpwanCount;
-
-    public Transform PlayerPos
-    {
-        get { return playerPos; }
-        set { playerPos = value; }
-    }
 
     public static GameManager I;
 
