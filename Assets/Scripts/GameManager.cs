@@ -8,15 +8,8 @@ public class GameManager : MonoBehaviour
     public int sccore;
     public bool isCheat = false;
     Transform playerPos;
-    PlayerInfo _playerinfo;
     public int killCount;
     public int SpwanCount;
-
-    public PlayerInfo _Playerinfo
-    {
-        get { return _playerinfo; }
-        set { _playerinfo = value; }
-    }
 
     public Transform PlayerPos
     {

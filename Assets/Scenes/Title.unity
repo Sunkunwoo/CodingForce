@@ -769,6 +769,7 @@ MonoBehaviour:
   scoreTxt: {fileID: 5825495875887952459}
   hpTxt: {fileID: 8097386145836164008}
   stageTxt: {fileID: 5136569886501102748}
+  player: {fileID: 6598813770665430342}
 --- !u!4 &895069451341618652
 Transform:
   m_ObjectHideFlags: 0

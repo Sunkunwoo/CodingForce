@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 2446148450242926207}
   - component: {fileID: 2046637284486540912}
   - component: {fileID: 5387716531375757199}
-  - component: {fileID: -300456515247987917}
   - component: {fileID: 2682864317507989264}
   - component: {fileID: 1190717112753967920}
+  - component: {fileID: -8530437432953172209}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Monster
@@ -168,19 +168,6 @@ MonoBehaviour:
   atkSound: {fileID: 8300000, guid: 622cdecfcf58444d7be5352e4209020a, type: 3}
   particlePrefab: {fileID: 7187897924225069257, guid: 2b0060591b69ca94bb3ce7c5b589485f, type: 3}
   type: 2
---- !u!114 &-300456515247987917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3564807561173650172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a0f5ebbec190ef49979500b177b5cc8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 51a4f1157b7ff1449b5e5cf064d584c7, type: 3}
 --- !u!114 &2682864317507989264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,7 +180,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 063199cfa7140bd4892cef33f2e10421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: {fileID: 7270107566069893458, guid: f9046819aa53da34c96db6c26a5d25c8, type: 3}
 --- !u!114 &1190717112753967920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,6 +195,20 @@ MonoBehaviour:
   bulletFabs: {fileID: 3294404223877578590, guid: 2753b4e4b9b50eb4b8232f75b6ad9430, type: 3}
   spawnPoint: {fileID: 8842729169435709441}
   atkValue: 0
+--- !u!114 &-8530437432953172209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3564807561173650172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27200cdbf2c4a3747b627b2bb3f0a2be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 51a4f1157b7ff1449b5e5cf064d584c7, type: 3}
+  objectTagToDelete: BgmPlayer
 --- !u!1 &6683796583480399042
 GameObject:
   m_ObjectHideFlags: 0
