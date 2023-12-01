@@ -44,9 +44,9 @@ GameObject:
   - component: {fileID: 2496371953402349888}
   - component: {fileID: 333573078150046482}
   - component: {fileID: 3966837363340389545}
-  - component: {fileID: 3310519639777644274}
   - component: {fileID: 8052450771132010545}
   - component: {fileID: 5150280232550170889}
+  - component: {fileID: -3103313351509348352}
   m_Layer: 0
   m_Name: Boss1
   m_TagString: Monster
@@ -199,19 +199,6 @@ MonoBehaviour:
   atkSound: {fileID: 8300000, guid: 622cdecfcf58444d7be5352e4209020a, type: 3}
   particlePrefab: {fileID: 7187897924225069257, guid: 2b0060591b69ca94bb3ce7c5b589485f, type: 3}
   type: 6
---- !u!114 &3310519639777644274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7264316864896476374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a0f5ebbec190ef49979500b177b5cc8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 51a4f1157b7ff1449b5e5cf064d584c7, type: 3}
 --- !u!114 &8052450771132010545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,3 +226,17 @@ MonoBehaviour:
   bulletFabs: {fileID: 3294404223877578590, guid: 2753b4e4b9b50eb4b8232f75b6ad9430, type: 3}
   spawnPoint: {fileID: 7351929174228881480}
   atkValue: 0
+--- !u!114 &-3103313351509348352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7264316864896476374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27200cdbf2c4a3747b627b2bb3f0a2be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 51a4f1157b7ff1449b5e5cf064d584c7, type: 3}
+  objectTagToDelete: BgmPlayer
