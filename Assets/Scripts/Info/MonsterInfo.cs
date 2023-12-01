@@ -7,6 +7,9 @@ public class MonsterInfo : Info
 
     void Start()
     {
+        float x = Random.Range(-8.5f, 8f);
+        float y = 5;
+        transform.position = new Vector3(x, y, 0);
         SetMonsterStats();
         StartCoroutine(ShootProjectiles());
     }

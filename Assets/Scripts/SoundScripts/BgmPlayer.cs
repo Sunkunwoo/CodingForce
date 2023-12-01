@@ -17,6 +17,6 @@ public class BgmPlayer : MonoBehaviour
         audioSource.volume = SoundManager.s.bgmsoundvolume;
         audioSource.clip = audioClip;
         audioSource.loop = true;
-        SoundManager.s.PlayBgm(audioClip);
+        audioSource.Play();
     }
 }
