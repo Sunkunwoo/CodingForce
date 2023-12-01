@@ -24,7 +24,7 @@ public class ShapeShot : MonoBehaviour
     private float _phi;
     private readonly List<float> _v = new List<float>();
     private readonly List<float> _xx = new List<float>();
-
+    private float atkValue = 10;
     public GameObject Bullet;
 
     private void Awake()
@@ -32,14 +32,115 @@ public class ShapeShot : MonoBehaviour
         //모양 데이터를 초기화 한다.
         ShapeInit();
     }
+
     private void Start()
     {
-        InvokeRepeating("Shoot", 0f, 0.5f);
+        InvokeRepeating("ShootWithATK", 0f, 0.5f);
+    }
+    private void ShootWithATK()
+    {
+        Shoot(atkValue);
     }
 
-    private void Update()
+    private void Shoot(float atk)
     {
 
+        if (Bullet != null && spawnPoint != null)
+        {
+            //rot값에 영향을 주지 않도록 별도로 dir값을 선언하였다.
+            float direction = Rotation;
+
+            //꼭짓점 수 만큼 실행
+            for (int r = 0; r < Vertex; r++)
+            {
+                for (int i = 1; i <= _m; i++)
+                {
+                    #region //1차 생성
+
+                    //총알 생성
+                    GameObject idx1 = Instantiate(Bullet);
+
+                    //2초후 삭제
+                    Destroy(idx1, 2f);
+
+                    //총알 생성 위치를 (0,0) 좌표로 한다.
+                    idx1.transform.position = spawnPoint.position;
+
+                    //정밀한 회전 처리로 모양을 만들어 낸다.
+                    idx1.transform.rotation = Quaternion.Euler(0, 0, direction + _xx[i]);
+
+                    //정밀한 속도 처리로 모양을 만들어 낸다.
+                    idx1.GetComponent<BulletController>().Speed = _v[i] * Speed / Subdivision;
+
+                    // 탄알 스크립트 가져오기
+                    BulletController bulletController = idx1.GetComponent<BulletController>();
+
+                    if (bulletController != null)
+                    {
+                        // Atk 값을 전달하여 탄알 초기화
+                        bulletController.Initialize(atk);
+                    }
+
+                    #endregion
+
+                    #region //2차 생성
+
+                    //총알 생성
+                    GameObject idx2 = Instantiate(Bullet);
+
+                    //2초후 삭제
+                    Destroy(idx2, 2f);
+
+                    //총알 생성 위치를 (0,0) 좌표로 한다.
+                    idx2.transform.position = spawnPoint.position;
+
+                    //정밀한 회전 처리로 모양을 만들어 낸다.
+                    idx2.transform.rotation = Quaternion.Euler(0, 0, direction - _xx[i]);
+
+                    //정밀한 속도 처리로 모양을 만들어 낸다.
+                    idx2.GetComponent<BulletController>().Speed = _v[i] * Speed / Subdivision;
+
+                    BulletController bulletController2 = idx2.GetComponent<BulletController>();
+
+                    if (bulletController2 != null)
+                    {
+                        // Atk 값을 전달하여 탄알 초기화
+                        bulletController2.Initialize(atk);
+                    }
+                    #endregion
+
+                    #region //3차 생성
+
+                    //총알 생성
+                    GameObject idx3 = Instantiate(Bullet);
+
+                    //2초후 삭제
+                    Destroy(idx3, 2f);
+
+                    //총알 생성 위치를 (0,0) 좌표로 한다.
+                    idx3.transform.position = spawnPoint.position;
+
+                    //정밀한 회전 처리로 모양을 만들어 낸다.
+                    idx3.transform.rotation = Quaternion.Euler(0, 0, direction);
+
+                    //정밀한 속도 처리로 모양을 만들어 낸다.
+                    idx3.GetComponent<BulletController>().Speed = Speed;
+
+                    BulletController bulletController3 = idx3.GetComponent<BulletController>();
+
+                    if (bulletController3 != null)
+                    {
+                        // Atk 값을 전달하여 탄알 초기화
+                        bulletController3.Initialize(atk);
+                    }
+
+                    #endregion
+
+                    //모양을 완성한다.
+                    direction += 360 / Vertex;
+                }
+            }
+        }
     }
 
     [ContextMenu("모양 변경 초기화")]
@@ -71,74 +172,6 @@ public class ShapeShot : MonoBehaviour
 
     private void Shoot()
     {
-        //rot값에 영향을 주지 않도록 별도로 dir값을 선언하였다.
-        float direction = Rotation;
-
-        //꼭짓점 수 만큼 실행
-        for (int r = 0; r < Vertex; r++)
-        {
-            for (int i = 1; i <= _m; i++)
-            {
-                #region //1차 생성
-
-                //총알 생성
-                GameObject idx1 = Instantiate(Bullet);
-
-                //2초후 삭제
-                Destroy(idx1, 2f);
-
-                //총알 생성 위치를 (0,0) 좌표로 한다.
-                idx1.transform.position = spawnPoint.position;
-
-                //정밀한 회전 처리로 모양을 만들어 낸다.
-                idx1.transform.rotation = Quaternion.Euler(0, 0, direction + _xx[i]);
-
-                //정밀한 속도 처리로 모양을 만들어 낸다.
-                idx1.GetComponent<BulletController>().Speed = _v[i] * Speed / Subdivision;
-
-                #endregion
-
-                #region //2차 생성
-
-                //총알 생성
-                GameObject idx2 = Instantiate(Bullet);
-
-                //2초후 삭제
-                Destroy(idx2, 2f);
-
-                //총알 생성 위치를 (0,0) 좌표로 한다.
-                idx2.transform.position = spawnPoint.position;
-
-                //정밀한 회전 처리로 모양을 만들어 낸다.
-                idx2.transform.rotation = Quaternion.Euler(0, 0, direction - _xx[i]);
-
-                //정밀한 속도 처리로 모양을 만들어 낸다.
-                idx2.GetComponent<BulletController>().Speed = _v[i] * Speed / Subdivision;
-
-                #endregion
-
-                #region //3차 생성
-
-                //총알 생성
-                GameObject idx3 = Instantiate(Bullet);
-
-                //2초후 삭제
-                Destroy(idx3, 2f);
-
-                //총알 생성 위치를 (0,0) 좌표로 한다.
-                idx3.transform.position = spawnPoint.position;
-
-                //정밀한 회전 처리로 모양을 만들어 낸다.
-                idx3.transform.rotation = Quaternion.Euler(0, 0, direction);
-
-                //정밀한 속도 처리로 모양을 만들어 낸다.
-                idx3.GetComponent<BulletController>().Speed = Speed;
-
-                #endregion
-
-                //모양을 완성한다.
-                direction += 360 / Vertex;
-            }
-        }
+        
     }
 }

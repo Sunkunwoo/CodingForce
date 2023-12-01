@@ -10,8 +10,13 @@ public class SpinShot : MonoBehaviour
 
     public float SpawnInterval = 0.5f;
     private float _spawnTimer;
+    float atk = 10;
 
     private void Update()
+    {
+        Shoot(atk);
+    }
+    private void Shoot(float atk)
     {
         //기본 회전
         transform.Rotate(Vector3.forward * (TurnSpeed * 100 * Time.deltaTime));
@@ -35,5 +40,13 @@ public class SpinShot : MonoBehaviour
         //총알의 방향을 오브젝트의 방향으로 한다.
         //->해당 오브젝트가 오브젝트가 360도 회전하고 있으므로, Rotation이 방향이 됨.
         temp.transform.rotation = spawnPoint.rotation;
+
+        BulletController bulletController = temp.GetComponent<BulletController>();
+
+        if (bulletController != null)
+        {
+            // Atk 값을 전달하여 탄알 초기화
+            bulletController.Initialize(atk);
+        }
     }
 }
