@@ -668,6 +668,11 @@ MonoBehaviour:
   isCheat: 1
   killCount: 0
   SpwanCount: 0
+--- !u!1 &1266229661 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8469582998675087407, guid: c2fbab5853e963941ac6446b711028ac, type: 3}
+  m_PrefabInstance: {fileID: 8480747505209179135}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1582571078
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,7 +864,7 @@ MonoBehaviour:
   scoreTxt: {fileID: 5825495875887952459}
   hpTxt: {fileID: 8097386145836164008}
   stageTxt: {fileID: 5136569886501102748}
-  player: {fileID: 0}
+  player: {fileID: 1266229661}
 --- !u!224 &1585167247835153837
 RectTransform:
   m_ObjectHideFlags: 0
