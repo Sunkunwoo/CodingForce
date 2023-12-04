@@ -5,7 +5,7 @@ using UnityEngine;
 public class BossMove : MonoBehaviour
 {
     private float moveSpeed;
-    private Vector3 positionA; // ¿ø·¡ ÁÂÇ¥
+    private Vector3 positionA; // Æ¯Á¤ ÁÂÇ¥A
     private Vector3 positionB;   // Æ¯Á¤ ÁÂÇ¥
     private bool movingToTarget = true;
 
