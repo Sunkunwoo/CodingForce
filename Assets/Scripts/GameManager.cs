@@ -1,6 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,8 +8,11 @@ public class GameManager : MonoBehaviour
     public int stage=1;
     public int sccore=0;
     public bool isCheat = false;
-    public int killCount=0;
-    public int SpwanCount=0;
+    public int killCount= 0;
+    public int SpwanCount = 0;
+
+    public GameObject ingameUiBox; 
+    public TextMeshProUGUI gameOverTxt;
 
     public static GameManager I;
 
@@ -21,7 +24,15 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        gameOverTxt.gameObject.SetActive(true);
         Time.timeScale = 0f;
+    }
+
+    public void RetryBtn()
+    {
+        Destroy(ingameUiBox);
+        SceneManager.LoadScene("Title");
+        Time.timeScale = 1f;
     }
 
 }

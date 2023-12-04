@@ -12,7 +12,7 @@ public class PlayerAddHide : MonoBehaviour
     // Update is called once per frame
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "Lobby" || scene.name == "Ending") // 플레이어 오브젝트가 안보이게 하고싶은 씬의 이름을 추가해야합니다.
+        if (scene.name == "Title" || scene.name == "Lobby" || scene.name == "Ending") // 플레이어 오브젝트가 안보이게 하고싶은 씬의 이름을 추가해야합니다.
         {
             gameObject.SetActive(false);
         }
@@ -20,5 +20,11 @@ public class PlayerAddHide : MonoBehaviour
         {
             gameObject.SetActive(true);
         }
+    }
+
+    void OnDestroy()
+    {
+        // 컴포넌트가 파괴될 때 이벤트에서 메서드 제거
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 }
