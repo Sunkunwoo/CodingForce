@@ -8,6 +8,10 @@ public class PlayerShoot : MonoBehaviour
     public GameObject Bullet;
     public Transform spawnPoint;
     public float atkValue;
+    public void EnableScript(bool enable)
+    {
+        enabled = enable;
+    }
     private void Start()
     {
         trickatkSound = GetComponent<Info>().atkSound;
