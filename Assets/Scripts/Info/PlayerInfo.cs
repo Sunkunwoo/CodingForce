@@ -21,7 +21,7 @@ public class PlayerInfo : Info
             MaxHp = 999999;
             Hp = 999999;
             Atk = 100000;
-            MoveSpeed = 50;
+            MoveSpeed = 500;
             BulletRpm = 300;
             Character = CharacterType.Player;
         }

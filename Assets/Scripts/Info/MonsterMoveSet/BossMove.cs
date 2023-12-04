@@ -34,7 +34,7 @@ public class BossMove : MonoBehaviour
 
     protected virtual void Start()
     {
-        moveSpeed = GetComponent<Info>().MoveSpeed;
+        moveSpeed = GetComponent<Info>().MoveSpeed * Time.deltaTime;
     }
 
     protected virtual void Update()

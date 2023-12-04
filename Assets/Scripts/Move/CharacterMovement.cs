@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
+    private float moveSpeed;
     private CharacterController controller;
     private Vector2 moveDirection = Vector2.zero;
     private Rigidbody2D rigidbody;
@@ -21,6 +22,7 @@ public class CharacterMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        moveSpeed = GetComponent<Info>().MoveSpeed;
         ApplyMovement(moveDirection);
     }
 
@@ -31,7 +33,7 @@ public class CharacterMovement : MonoBehaviour
 
     private void ApplyMovement(Vector2 direction)
     {
-        direction = direction * 5;
+        direction = direction * moveSpeed * Time.deltaTime;
         rigidbody.velocity = direction;
     }
 }
