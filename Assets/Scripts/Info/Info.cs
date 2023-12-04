@@ -126,23 +126,19 @@ public class Info : MonoBehaviour
 
         if (type == 5)
         {
-            Debug.Log("총알 + 몬스터 삭제");
-            GameObject[] mbullet = GameObject.FindGameObjectsWithTag("Mbullet");
-            GameObject[] monster = GameObject.FindGameObjectsWithTag("Monster");
-
-            for (int i = 0; i < mbullet.Length; i++)
-            {
-                Destroy(mbullet[i]);
-            }
-
-            for (int i = 0; i < monster.Length; i++)
-            {
-                Destroy(monster[i]);
-            }
+            Debug.Log("5초간 쉴드 생성");
+            GameObject shield = transform.GetChild(0).gameObject;
+            shield.SetActive(true);
+            Invoke("ShieldOff", 5f);
         }
 
     }
 
+    public void ShieldOff()
+    {
+        GameObject shield = transform.GetChild(0).gameObject;
+        shield.SetActive(false);
+    }
 
 
 }
