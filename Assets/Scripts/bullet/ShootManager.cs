@@ -6,10 +6,11 @@ public abstract class ShootManager : MonoBehaviour
     public AudioClip trickatkSound;
     public GameObject Bullet;
     public Transform spawnPoint;
-    public float Speed = 3;
+    public float Speed;
 
     protected virtual void Start()
     {
+        Speed = 3;
         trickatkSound = GetComponent<Info>().atkSound;
         InvokeRepeating("Shoot", 0f, 2f);
     }
