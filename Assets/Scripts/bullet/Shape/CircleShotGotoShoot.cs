@@ -52,7 +52,6 @@ public class CircleShotGotoShoot : ShootManager
     private IEnumerator BulletToTarget(List<Transform> objects)
     {
         yield return new WaitForSeconds(0.5f);
-
         foreach (var obj in objects)
         {
             if (obj != null)

@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public bool clearCheck=false;
     public int stage=1;
-    public int sccore;
+    public int sccore=0;
     public bool isCheat = false;
-    public int killCount;
-    public int SpwanCount;
+    public int killCount=0;
+    public int SpwanCount=0;
 
     public static GameManager I;
 

@@ -11,7 +11,7 @@ public class PlayerBulletController : BulletController
 
     public override void HandleCollision(Collider2D other)
     {
-        if (other.CompareTag("Monster"))
+        if (other.CompareTag("Monster") || other.CompareTag("Boss"))
         {
             Info monsterInfo = other.GetComponent<Info>();
             if (monsterInfo != null)
