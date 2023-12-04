@@ -82,6 +82,9 @@ public class StageManager : MonoBehaviour
                         GameManager.I.SpwanCount++;
                         Instantiate(spwanMonster3);
                         break;
+                    default:
+                        Debug.Log("디폴트");
+                        break;
                 }
             }
             else
@@ -95,11 +98,6 @@ public class StageManager : MonoBehaviour
         {
             Debug.Log("생성 제한 초과");
         }
-
-    }
-
-    void ClearStage()
-    {
 
     }
 

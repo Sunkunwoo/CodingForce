@@ -47,7 +47,6 @@ GameObject:
   - component: {fileID: 3948011316281818970}
   - component: {fileID: -842411771383951094}
   - component: {fileID: 4190307850906685297}
-  - component: {fileID: 3372212635690887424}
   m_Layer: 0
   m_Name: Boss2
   m_TagString: Boss
@@ -244,15 +243,3 @@ MonoBehaviour:
   Bullet: {fileID: 0}
   spawnPoint: {fileID: 0}
   Speed: 3
---- !u!114 &3372212635690887424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6916174699615346598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70d2d80e97cbbf74b828c7b1ed864b94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
