@@ -6,6 +6,7 @@ using UnityEngine;
 public class Info : MonoBehaviour
 {
     public AudioClip atkSound;
+    public GameObject Bullet;
     public enum CharacterType
     {
         Player,
@@ -84,16 +85,27 @@ public class Info : MonoBehaviour
     }
     public void GetItem(int type)
     {
-        if (type == 0)
+        if (type == 1)
             Hp += 10;
-        else if (type == 1)
-            Atk += 2;
         if (type == 2)
-            MoveSpeed += 1;
+            Atk += 2;
         if (type == 3)
+        {
+            Debug.Log("속도 up");
             BulletRpm += 10;
+            MoveSpeed += 1;
+        }
         if (type == 4)
-            Hp += 10;
+        {
+            Destroy(Bullet);
+            Debug.Log("모든총알 삭제");
+        }
+
+        if (type == 5)
+        {
+            Destroy(Bullet);
+            Debug.Log("모든총알 삭제");
+        }
 
     }
 
