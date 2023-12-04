@@ -5,20 +5,21 @@ using UnityEngine;
 public class MonsterMove : MonoBehaviour
 {
 
-    private void Move()
+    void MobMove()
     {
-        transform.position += new Vector3(transform.position.x, -1f, 0f);
+        if (transform.position.x >= -8.5f && transform.position.x <= 8f && transform.position.y <= 4f && transform.position.y >= 0.5f)
+        {
+                transform.position += new Vector3(transform.position.x, -1f, 0f);
+        }
+        else
+        {
+            CancelInvoke("MobMove");
+        }
     }
+
     void Start()
     {
-        if(transform.position.x <= -8f && transform.position.x >= 8)
-        {
-            while(transform.position.y >= 4)
-            {
-                Move();
-            }
-        }
-
+        InvokeRepeating("MobMove", 0.1f, 0.1f);
     }
 
 }
