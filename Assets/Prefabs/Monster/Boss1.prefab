@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: -3103313351509348352}
   - component: {fileID: -3820815129269946980}
   - component: {fileID: -4775468584488413318}
+  - component: {fileID: -3968782163651881903}
   m_Layer: 0
   m_Name: Boss1
   m_TagString: Boss
@@ -241,7 +242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trickatkSound: {fileID: 0}
-  Bullet: {fileID: 0}
+  Bullet: {fileID: 3294404223877578590, guid: 2753b4e4b9b50eb4b8232f75b6ad9430, type: 3}
   spawnPoint: {fileID: 0}
   Speed: 3
   Target: {fileID: 0}
@@ -255,5 +256,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: adcd79bd5594d684bb41c7dff8bfa78c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-3968782163651881903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7264316864896476374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8ebb2b31292e3a47ad853fb3e87d312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

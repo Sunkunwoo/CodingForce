@@ -11,6 +11,16 @@ public class PlayerShoot : MonoBehaviour
     public void EnableScript(bool enable)
     {
         enabled = enable;
+
+        if (!enable)
+        {
+            // 스크립트를 비활성화할 때 InvokeRepeating도 중지
+            CancelInvoke("ShootWithAtk");
+        }
+        else
+        {
+            InvokeRepeating("ShootWithAtk", 0f, 0.5f);
+        }
     }
     private void Start()
     {
