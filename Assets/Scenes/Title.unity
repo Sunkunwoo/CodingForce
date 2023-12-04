@@ -251,7 +251,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3662002554735798428, guid: c2fbab5853e963941ac6446b711028ac, type: 3}
   m_PrefabInstance: {fileID: 8480747505209179135}
   m_PrefabAsset: {fileID: 0}
---- !u!58 &497287637
+--- !u!58 &497287640
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -280,7 +280,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1388,6 +1388,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3662002554735798428, guid: c2fbab5853e963941ac6446b711028ac, type: 3}
+      propertyPath: m_TagString
+      value: Shield
+      objectReference: {fileID: 0}
     - target: {fileID: 6687497773147704054, guid: c2fbab5853e963941ac6446b711028ac, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -1454,5 +1458,5 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3662002554735798428, guid: c2fbab5853e963941ac6446b711028ac, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 497287637}
+      addedObject: {fileID: 497287640}
   m_SourcePrefab: {fileID: 100100000, guid: c2fbab5853e963941ac6446b711028ac, type: 3}

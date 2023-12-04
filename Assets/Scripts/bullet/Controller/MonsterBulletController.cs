@@ -25,5 +25,9 @@ public class MonsterBulletController : BulletController
                 Debug.LogError("'Player' 태그를 가진 객체에서 Info 컴포넌트를 찾을 수 없습니다.");
             }
         }
+        else if (other.CompareTag("Shield"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

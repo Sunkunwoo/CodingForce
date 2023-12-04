@@ -91,63 +91,58 @@ public class Info : MonoBehaviour
             }
         }
     }
-    public void GetItem(int type)
-    {
-        if (type == 1)
-        {
-            Debug.Log("ü�� up");
-            Hp += 20;
-            Debug.Log(Hp);
+    //public void GetItem(int type)
+    //{
+    //    if (type == 1)
+    //    {
+    //        Hp += 20;
+    //        Debug.Log(Hp);
 
-        }
+    //    }
 
-        if (type == 2)
-        {
-            Debug.Log("���ݷ� up");
-            Atk += 5;
-            Debug.Log(Atk);
-        }
+    //    if (type == 2)
+    //    {
+    //        Atk += 5;
+    //        Debug.Log(Atk);
+    //    }
 
-        if (type == 3)
-        {
-            Debug.Log("�ӵ� up");
-            BulletRpm += 20;
-            MoveSpeed += 5;
-            Debug.Log(BulletRpm);
-            Debug.Log(MoveSpeed);
-        }
-        if (type == 4)
-        { 
-            Debug.Log("�Ѿ� + ���� ����");
-            GameObject[] mbullet = GameObject.FindGameObjectsWithTag("Mbullet");
-            GameObject[] monster = GameObject.FindGameObjectsWithTag("Monster");
+    //    if (type == 3)
+    //    {
+    //        BulletRpm += 20;
+    //        MoveSpeed += 5;
+    //        Debug.Log(BulletRpm);
+    //        Debug.Log(MoveSpeed);
+    //    }
+    //    if (type == 4)
+    //    { 
+    //        GameObject[] mbullet = GameObject.FindGameObjectsWithTag("Mbullet");
+    //        GameObject[] monster = GameObject.FindGameObjectsWithTag("Monster");
 
-            for (int i = 0; i < mbullet.Length; i++)
-            {
-                Destroy(mbullet[i]);
-            }
+    //        for (int i = 0; i < mbullet.Length; i++)
+    //        {
+    //            Destroy(mbullet[i]);
+    //        }
 
-            for (int i = 0; i < monster.Length; i++)
-            {
-                Destroy(monster[i]);
-            }
-        }
+    //        for (int i = 0; i < monster.Length; i++)
+    //        {
+    //            Destroy(monster[i]);
+    //        }
+    //    }
 
-        if (type == 5)
-        {
-            Debug.Log("5�ʰ� ���� ����");
-            GameObject shield = transform.GetChild(0).gameObject;
-            shield.SetActive(true);
-            Invoke("ShieldOff", 5f);
-        }
+    //    if (type == 5)
+    //    {
+    //        GameObject shield = transform.GetChild(0).gameObject;
+    //        shield.SetActive(true);
+    //        Invoke("ShieldOff", 5f);
+    //    }
 
-    }
+    //}
 
-    public void ShieldOff()
-    {
-        GameObject shield = transform.GetChild(0).gameObject;
-        shield.SetActive(false);
-    }
+    //public void ShieldOff()
+    //{
+    //    GameObject shield = transform.GetChild(0).gameObject;
+    //    shield.SetActive(false);
+    //}
 
 
 }

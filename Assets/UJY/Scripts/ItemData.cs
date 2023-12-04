@@ -40,15 +40,39 @@ public class ItemData : MonoBehaviour
             if (playerInfo != null)
             {
                 if (gameObject == Apple)
-                    playerInfo.GetItem(1);
+                {
+                    other.GetComponent<Info>().Hp += 20;
+                }
                 else if (gameObject == Banana)
-                    playerInfo.GetItem(2);
+                {
+                    other.GetComponent<Info>().Atk += 5;
+                }
                 else if (gameObject == Kiwi)
-                    playerInfo.GetItem(3);
+                {
+                    other.GetComponent<Info>().BulletRpm += 5;
+                    other.GetComponent<Info>().MoveSpeed += 5;
+                }
                 else if (gameObject == Pineapple)
-                    playerInfo.GetItem(4);
+                {
+                    GameObject[] mbullet = GameObject.FindGameObjectsWithTag("Mbullet");
+                    GameObject[] monster = GameObject.FindGameObjectsWithTag("Monster");
+
+                    for (int i = 0; i < mbullet.Length; i++)
+                    {
+                        Destroy(mbullet[i]);
+                    }
+
+                    for (int i = 0; i < monster.Length; i++)
+                    {
+                        Destroy(monster[i]);
+                    }
+                }
                 else if (gameObject == Melon)
-                    playerInfo.GetItem(5);
+                {
+                    GameObject shield = GameObject.FindGameObjectWithTag("Shield");
+                    shield.SetActive(true);
+                    Invoke("ShieldOff", 5f);
+                }
 
                 Destroy(gameObject);
 
@@ -70,6 +94,12 @@ public class ItemData : MonoBehaviour
             Destroy(gameObject);
         }
 
+    }
+
+    public void ShieldOff()
+    {
+        GameObject shield = GameObject.FindGameObjectWithTag("Shield");
+        shield.SetActive(false);
     }
 
 
