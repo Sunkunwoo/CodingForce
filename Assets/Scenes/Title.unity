@@ -662,11 +662,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fd4d5cebb9281343809804c362c518e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clearCheck: 0
   stage: 1
   sccore: 0
   isCheat: 1
   killCount: 0
   SpwanCount: 0
+--- !u!1 &1266229661 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8469582998675087407, guid: c2fbab5853e963941ac6446b711028ac, type: 3}
+  m_PrefabInstance: {fileID: 8480747505209179135}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1582571078
 GameObject:
   m_ObjectHideFlags: 0
@@ -858,7 +864,7 @@ MonoBehaviour:
   scoreTxt: {fileID: 5825495875887952459}
   hpTxt: {fileID: 8097386145836164008}
   stageTxt: {fileID: 5136569886501102748}
-  player: {fileID: 0}
+  player: {fileID: 1266229661}
 --- !u!224 &1585167247835153837
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1384,11 +1390,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6687497773147704054, guid: c2fbab5853e963941ac6446b711028ac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.41
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 6687497773147704054, guid: c2fbab5853e963941ac6446b711028ac, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.82
+      value: -3.95
       objectReference: {fileID: 0}
     - target: {fileID: 6687497773147704054, guid: c2fbab5853e963941ac6446b711028ac, type: 3}
       propertyPath: m_LocalPosition.z

@@ -11,6 +11,7 @@ public class ItemData : MonoBehaviour
     public GameObject Kiwi;
     public GameObject Pineapple;
     public GameObject Melon;
+    public AudioClip getSound;
 
     //public AudioClip ItemSound;
 
@@ -28,6 +29,14 @@ public class ItemData : MonoBehaviour
         Info playerInfo = other.GetComponent<Info>();
         if (other != null && other.CompareTag("Player"))
         {
+            if (getSound != null)
+            {
+                SoundManager.s.PlayFXSound(getSound);
+            }
+            else
+            {
+                Debug.Log("get Sound is Null");
+            }
             if (playerInfo != null)
             {
                 if (gameObject == Apple)
