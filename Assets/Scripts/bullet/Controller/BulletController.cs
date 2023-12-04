@@ -5,7 +5,7 @@ public class BulletController : MonoBehaviour
 {
     public float dmg = 0;
     public float Speed {get { return speed; } set { speed = value; }}
-    public float speed = 3;
+    public float speed;
 
     private void Start()
     {

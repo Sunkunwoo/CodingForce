@@ -47,7 +47,7 @@ public class BossDeadText : MonoBehaviour
     {
         foreach (BossText member in bossTxt)
         {
-            if (GameManager.I.stage == member.Num)
+            if (GameManager.I.stage - 1 == member.Num)
             {
                 txtBox.text = member.Txt; 
             }

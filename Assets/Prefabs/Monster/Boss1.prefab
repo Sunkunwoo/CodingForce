@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 8052450771132010545}
   - component: {fileID: -3103313351509348352}
   - component: {fileID: -3820815129269946980}
+  - component: {fileID: -4775468584488413318}
   m_Layer: 0
   m_Name: Boss1
   m_TagString: Boss
@@ -178,7 +179,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -244,3 +245,15 @@ MonoBehaviour:
   spawnPoint: {fileID: 0}
   Speed: 3
   Target: {fileID: 0}
+--- !u!114 &-4775468584488413318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7264316864896476374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adcd79bd5594d684bb41c7dff8bfa78c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

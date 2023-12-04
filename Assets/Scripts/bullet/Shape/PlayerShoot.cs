@@ -8,6 +8,10 @@ public class PlayerShoot : MonoBehaviour
     public GameObject Bullet;
     public Transform spawnPoint;
     public float atkValue;
+    public void EnableScript(bool enable)
+    {
+        enabled = enable;
+    }
     private void Start()
     {
         trickatkSound = GetComponent<Info>().atkSound;
@@ -24,11 +28,10 @@ public class PlayerShoot : MonoBehaviour
         if (Bullet != null && spawnPoint != null)
         {
             GameObject bullet = Instantiate(Bullet, spawnPoint.position, spawnPoint.rotation);
-            // 탄알 스크립트 가져오기
+
             PlayerBulletController bulletController = bullet.GetComponent<PlayerBulletController>();
             if (bulletController != null)
             {
-                // Atk 값을 전달하여 탄알 초기화
                 bulletController.Initialize(atk);
             }
         }
