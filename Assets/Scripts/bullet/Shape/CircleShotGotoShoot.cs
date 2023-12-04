@@ -18,12 +18,7 @@ public class CircleShotGotoShoot : ShootManager
     {
         if (Target != null)
         {
-            if (targetInstance == null)
-            {
-                targetInstance = Instantiate(Target, Target.position, Target.rotation);
-            }
-
-            TargetPosition = targetInstance.position;
+            TargetPosition = Target.position;
         }
     }
     public override void Shoot(float atk)

@@ -100,7 +100,8 @@ GameObject:
   - component: {fileID: 8603279051841600450}
   - component: {fileID: 5929840311418839224}
   - component: {fileID: 8265478183506313180}
-  - component: {fileID: -6357347324919857986}
+  - component: {fileID: 6717726301835877100}
+  - component: {fileID: 8299356721227358812}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -306,7 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 403f963ad3945d945874864ce0ae66ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-6357347324919857986
+--- !u!114 &6717726301835877100
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -322,3 +323,17 @@ MonoBehaviour:
   Bullet: {fileID: 3294404223877578590, guid: a02e015b9add3ea459fa71de876f826a, type: 3}
   spawnPoint: {fileID: 6687497773147704054}
   atkValue: 0
+--- !u!114 &8299356721227358812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8469582998675087407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f15d5b4b8c794e74aacf4ac879d3e7db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Aim: {fileID: 6687497773147704054}
+  playerTransform: {fileID: 6687497773147704054}

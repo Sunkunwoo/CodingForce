@@ -11,6 +11,7 @@ public class StageManager : MonoBehaviour
     public GameObject bossSpwan;
     public GameObject txtUi;
     public GameObject ObjectSpawner;
+    public GameObject MousePointer;
     float spwanTime;
     int stageNumber;
     int targetKill;
@@ -38,6 +39,7 @@ public class StageManager : MonoBehaviour
         InvokeRepeating("Spawns", 0.5f, spwanTime);
         InvokeRepeating("ClearStage", 0, 1f);
         Instantiate(ObjectSpawner);
+        Instantiate(MousePointer);
     }
 
     void Spawns()
