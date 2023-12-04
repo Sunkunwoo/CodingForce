@@ -1,40 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class PlayerInfo : Info
+public class PlayerBulletSpwan : MonoBehaviour
 {
+    float atk;
+    float rpm;
+    AudioClip atkSound;
+    // Start is called before the first frame update
     void Start()
     {
-        if (GameManager.I.isCheat == false)
-        {
-            MaxHp = 100;
-            Hp = 100;
-            Atk = 10;
-            MoveSpeed = 5;
-            BulletRpm = 2;
-            Character = CharacterType.Player;
-        }
-        else
-        {
-            MaxHp = 999999;
-            Hp = 999999;
-            Atk = 100000;
-            MoveSpeed = 500;
-            BulletRpm = 300;
-            Character = CharacterType.Player;
-        }
-        DontDestroyOnLoad(this.gameObject);
-        StartCoroutine(ShootProjectiles());
-        gameObject.SetActive(false);
+        atk = GetComponent<Info>().Atk;
+        rpm = GetComponent<Info>().BulletRpm;
+        atkSound = GetComponent<Info>().atkSound;
     }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
     IEnumerator ShootProjectiles()
     {
         while (true)
         {
             SpawnBullet();
-            yield return new WaitForSeconds(60f / BulletRpm);
+            yield return new WaitForSeconds(60f / rpm);
         }
     }
     void SpawnBullet()
@@ -52,10 +44,8 @@ public class PlayerInfo : Info
         if (bulletSpawner != null)
         {
             // Atk 값을 전달하여 탄알 발사
-            bulletSpawner.Shoot(Atk);
+            bulletSpawner.Shoot(atk);
             SoundManager.s.PlayFXSound(atkSound);
         }
     }
-
-
 }
