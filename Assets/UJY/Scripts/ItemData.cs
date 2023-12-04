@@ -26,7 +26,7 @@ public class ItemData : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         Info playerInfo = other.GetComponent<Info>();
-        if (other != null && other.CompareTag("User"))
+        if (other != null && other.CompareTag("Player"))
         {
             if (playerInfo != null)
             {
@@ -41,6 +41,8 @@ public class ItemData : MonoBehaviour
                 else if (gameObject == Melon)
                     playerInfo.GetItem(5);
 
+                Destroy(gameObject);
+
                 Debug.Log("æ∆¿Ã≈€ »πµÊ");
             }
             else
@@ -49,6 +51,15 @@ public class ItemData : MonoBehaviour
             }
         }
 
+
+    }
+
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (coll.gameObject.tag == "Collision")
+        {
+            Destroy(gameObject);
+        }
 
     }
 

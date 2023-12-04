@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3994998922410752189}
   - component: {fileID: 3896038704095290780}
   - component: {fileID: 8701331606960141849}
-  - component: {fileID: -5887344650900031992}
   m_Layer: 0
   m_Name: Bananas
   m_TagString: Untagged
@@ -34,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2701803459518613960
 SpriteRenderer:
@@ -167,15 +166,3 @@ MonoBehaviour:
   Kiwi: {fileID: 2025522947727327946, guid: c196f7fad5429074fabc118f46e3892a, type: 3}
   Pineapple: {fileID: 5634722634605835825, guid: 720776e482aafc74a8aba8c129007b2a, type: 3}
   Melon: {fileID: 5634722634605835825, guid: 720776e482aafc74a8aba8c129007b2a, type: 3}
---- !u!114 &-5887344650900031992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 342697243859752344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cf59896a150f794d9fe9b981fce34cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
