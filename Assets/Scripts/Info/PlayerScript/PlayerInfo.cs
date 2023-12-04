@@ -12,7 +12,7 @@ public class PlayerInfo : Info
             MaxHp = 100;
             Hp = 100;
             Atk = 10;
-            MoveSpeed = 5;
+            MoveSpeed = 500;
             BulletRpm = 2;
             Character = CharacterType.Player;
         }
@@ -26,6 +26,19 @@ public class PlayerInfo : Info
             Character = CharacterType.Player;
         }
         DontDestroyOnLoad(this.gameObject);
-        gameObject.SetActive(false);
+    }
+
+    private void OnDestroy()
+    {
+        if (deadSound != null)
+        {
+            SoundManager.s.PlayFXSound(deadSound);
+        }
+        else
+        {
+            Debug.Log("deadSound File is null");
+        }
+
+        GameManager.I.GameOver();
     }
 }

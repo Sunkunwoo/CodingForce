@@ -38,4 +38,9 @@ public class IngameTxtUi : MonoBehaviour
             gameObject.SetActive(true);
         }
     }
+    void OnDestroy()
+    {
+        // 컴포넌트가 파괴될 때 이벤트에서 메서드 제거
+        SceneManager.sceneLoaded -= OnSceneLoadedUi;
+    }
 }
