@@ -91,6 +91,7 @@ public class StageManager : MonoBehaviour
             }
             else
             {
+                GameManager.I.bossCheck = true;
                 Instantiate(bossSpwan);
                 CancelInvoke("Spawns");
             }
