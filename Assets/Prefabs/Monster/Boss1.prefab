@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: -3820815129269946980}
   m_Layer: 0
   m_Name: Boss1
-  m_TagString: Monster
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -240,4 +240,5 @@ MonoBehaviour:
   trickatkSound: {fileID: 0}
   Bullet: {fileID: 0}
   spawnPoint: {fileID: 0}
+  Speed: 3
   Target: {fileID: 0}

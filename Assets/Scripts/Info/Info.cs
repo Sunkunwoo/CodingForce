@@ -6,7 +6,6 @@ using UnityEngine;
 public class Info : MonoBehaviour
 {
     public AudioClip atkSound;
-    public GameObject Bullet;
     public enum CharacterType
     {
         Player,
@@ -86,27 +85,60 @@ public class Info : MonoBehaviour
     public void GetItem(int type)
     {
         if (type == 1)
-            Hp += 10;
+        {
+            Debug.Log("체력 up");
+            Hp += 20;
+            Debug.Log(Hp);
+
+        }
+
         if (type == 2)
-            Atk += 2;
+        {
+            Debug.Log("공격력 up");
+            Atk += 5;
+            Debug.Log(Atk);
+        }
+
         if (type == 3)
         {
             Debug.Log("속도 up");
-            BulletRpm += 10;
-            MoveSpeed += 1;
+            BulletRpm += 20;
+            MoveSpeed += 5;
+            Debug.Log(BulletRpm);
+            Debug.Log(MoveSpeed);
         }
         if (type == 4)
-        {
-            Destroy(Bullet);
-            Debug.Log("모든총알 삭제");
+        { 
+            Debug.Log("총알 + 몬스터 삭제");
+            GameObject[] mbullet = GameObject.FindGameObjectsWithTag("Mbullet");
+            GameObject[] monster = GameObject.FindGameObjectsWithTag("Monster");
+
+            for (int i = 0; i < mbullet.Length; i++)
+            {
+                Destroy(mbullet[i]);
+            }
+
+            for (int i = 0; i < monster.Length; i++)
+            {
+                Destroy(monster[i]);
+            }
         }
 
         if (type == 5)
         {
-            Destroy(Bullet);
-            Debug.Log("모든총알 삭제");
+            Debug.Log("5초간 쉴드 생성");
+            GameObject shield = transform.GetChild(0).gameObject;
+            shield.SetActive(true);
+            Invoke("ShieldOff", 5f);
         }
 
     }
+
+    public void ShieldOff()
+    {
+        GameObject shield = transform.GetChild(0).gameObject;
+        shield.SetActive(false);
+    }
+
 
 }

@@ -8,6 +8,8 @@ TagManager:
   - Monster
   - BgmPlayer
   - Mbullet
+  - Collision
+  - Boss
   layers:
   - Default
   - TransparentFX

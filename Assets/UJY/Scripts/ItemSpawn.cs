@@ -21,7 +21,7 @@ public class ItemSpawn : MonoBehaviour
 
     void MakeItem()
     {
-        type = Random.Range(0, 4);
+        type = Random.Range(0, 5);
         if (type == 0)
             Instantiate(Apple);
         else if (type == 1)
