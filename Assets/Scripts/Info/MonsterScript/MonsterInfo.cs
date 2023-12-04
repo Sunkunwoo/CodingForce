@@ -107,14 +107,17 @@ public class MonsterInfo : Info
             case CharacterType.Boss1:
                 GameManager.I.clearCheck = true;
                 GameManager.I.stage = 2;
+                GameManager.I.bossCheck = false;
                 break;
             case CharacterType.Boss2:
                 GameManager.I.clearCheck = true;
                 GameManager.I.stage = 3;
+                GameManager.I.bossCheck = false;
                 break;
             case CharacterType.Boss3:
                 GameManager.I.clearCheck = true;
                 GameManager.I.stage = 4;
+                GameManager.I.bossCheck = false;
                 break;
         }
     }
