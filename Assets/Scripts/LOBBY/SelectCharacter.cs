@@ -8,6 +8,7 @@ using UnityEngine.UIElements;
 
 public class SelectCharacter : MonoBehaviour
 {
+    public AudioClip audioClip;
     public Character character;
     Animator anim;
     SpriteRenderer sprite;
@@ -23,6 +24,7 @@ public class SelectCharacter : MonoBehaviour
 
     private void OnMouseUpAsButton() //콜라이더가 아니라서 그럼
     {
+        SoundManager.s.PlayFXSound(audioClip);
         DataMgr.instance.currentCharacter = character;
         OnSelect();
         for(int i=0; i<chars.Length; i++)

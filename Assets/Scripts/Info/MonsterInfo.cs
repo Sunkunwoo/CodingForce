@@ -1,9 +1,12 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MonsterInfo : Info
 {
     public CharacterType type;
+    private int addScore;
 
     void Start()
     {
@@ -24,6 +27,7 @@ public class MonsterInfo : Info
                 Atk = 10;
                 MoveSpeed = 2;
                 BulletRpm = 60;
+                addScore = 10;
                 break;
             case CharacterType.Monster2:
                 MaxHp = 50;
@@ -31,6 +35,7 @@ public class MonsterInfo : Info
                 Atk = 3;
                 MoveSpeed = 1;
                 BulletRpm = 120;
+                addScore = 20;
                 break;
             case CharacterType.Monster3:
                 MaxHp = 10;
@@ -38,6 +43,7 @@ public class MonsterInfo : Info
                 Atk = 20;
                 MoveSpeed = 4;
                 BulletRpm = 20;
+                addScore = 30;
                 break;
             case CharacterType.Monster4:
                 MaxHp = 10;
@@ -45,6 +51,7 @@ public class MonsterInfo : Info
                 Atk = 1;
                 MoveSpeed = 1;
                 BulletRpm = 60;
+                addScore = 30;
                 break;
             case CharacterType.Monster5:
                 MaxHp = 100;
@@ -52,6 +59,7 @@ public class MonsterInfo : Info
                 Atk = 15;
                 MoveSpeed = 2;
                 BulletRpm = 60;
+                addScore = 30;
                 break;
             case CharacterType.Boss1:
                 MaxHp = 200;
@@ -59,6 +67,7 @@ public class MonsterInfo : Info
                 Atk = 10;
                 MoveSpeed = 5;
                 BulletRpm = 120;
+                addScore = 100;
                 break;
             case CharacterType.Boss2:
                 MaxHp = 250;
@@ -66,6 +75,7 @@ public class MonsterInfo : Info
                 Atk = 15;
                 MoveSpeed = 5;
                 BulletRpm = 120;
+                addScore = 200;
                 break;
             case CharacterType.Boss3:
                 MaxHp = 300;
@@ -73,6 +83,7 @@ public class MonsterInfo : Info
                 Atk = 20;
                 MoveSpeed = 5;
                 BulletRpm = 120;
+                addScore = 300;
                 break;
         }
     }
@@ -89,13 +100,52 @@ public class MonsterInfo : Info
     void SpawnBullet()
     {
         // 몬스터가 탄알을 발사하는 스크립트 가져오기
-        BulletSpawner bulletSpawner= GetComponent<BulletSpawner>();
-
+        ShootManager bulletSpawner= GetComponent<ShootManager>();
+        //List<ShootManager> shootList = new List<ShootManager>();
+        //shootList.Add(new CircleShoot());
+        //shootList.Add(new CircleShotGotoShoot());
+        //shootList.Add(new HeartShoot());
+        //shootList.Add(new ShapeShoot());
+        //shootList.Add(new SpinShoot());
+        //shootList.Add(new StraightShoot());
+        //shootList[0].Shoot(Atk);
         if (bulletSpawner != null)
         {
             // Atk 값을 전달하여 탄알 발사
-            bulletSpawner.SpawnBullet(Atk);
+            bulletSpawner.Shoot(Atk);
             SoundManager.s.PlayFXSound(atkSound);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (deadSound != null)
+        {
+            SoundManager.s.PlayFXSound(deadSound);
+        }
+        else
+        {
+            Debug.Log("Dead Sound Clip is Null");
+        }
+        GameManager.I.sccore += addScore;
+        GameManager.I.killCount++;
+        GameManager.I.SpwanCount--;
+        Debug.Log("killCount: " + GameManager.I.killCount);
+        Debug.Log("SpwanCount: " + GameManager.I.SpwanCount);
+        switch(type)
+        {
+            case CharacterType.Boss1:
+                GameManager.I.clearCheck = true;
+                GameManager.I.stage = 2;
+                break;
+            case CharacterType.Boss2:
+                GameManager.I.clearCheck = true;
+                GameManager.I.stage = 3;
+                break;
+            case CharacterType.Boss3:
+                GameManager.I.clearCheck = true;
+                GameManager.I.stage = 4;
+                break;
         }
     }
 

@@ -2,65 +2,27 @@
 using UnityEngine;
 
 
-public class HeartShot : MonoBehaviour
+public class HeartShoot : ShootManager
 {
-
-    //발사될 총알
-    public GameObject Bullet;
-    public Transform spawnPoint;
-    //초기 중심 : 회전 되는 방향
     [Range(0, 360), Tooltip("퍼지기 전 회전을 줄 수 있음")]
     public float Rotation;
-    private float atkValue = 0;
 
     private readonly float[] _speeds = new float[34];
     private readonly float[] _direction = new float[34];
 
     private void Awake()
     {
-        //하트 모양으로 데이터 초기화
         HeartDataInit();
     }
 
-    private void Start()
+    public override void Shoot(float atk)
     {
-        InvokeRepeating("ShootWithATK", 0f, 0.5f);
-    }
-    private void ShootWithATK()
-    {
-        Shoot(atkValue);
-    }
-
-    private void Shoot(float atk)
-    {
-
+        SoundManager.s.PlayFXSound(trickatkSound);
         if (Bullet != null && spawnPoint != null)
         {
-            //34개의 게임오브젝트 생성
             for (int i = 0; i < 34; i += 1)
             {
-                //오브젝트 생성
-                GameObject temp = Instantiate(Bullet);
-
-                //2초후 삭제
-                Destroy(temp, 2f);
-
-                //총알 생성 위치를 (0,0) 좌표로 한다.
-                temp.transform.position = spawnPoint.position;
-
-                //정밀한 회전 처리로 모양을 만들어 낸다.
-                temp.transform.rotation = Quaternion.Euler(0, 0, _direction[i] + Rotation);
-
-                //정밀한 속도 처리로 모양을 만들어 낸다.
-                temp.GetComponent<BulletController>().Speed = _speeds[i] / 50;
-                // 탄알 스크립트 가져오기
-                BulletController bulletController = temp.GetComponent<BulletController>();
-
-                if (bulletController != null)
-                {
-                    // Atk 값을 전달하여 탄알 초기화
-                    bulletController.Initialize(atk);
-                }
+                SpawnBullet(spawnPoint.position, Quaternion.Euler(0, 0, _direction[i] + Rotation), atk, _speeds[i] / 50);
             }
         }
     }

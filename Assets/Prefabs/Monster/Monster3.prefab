@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 5393887356619505732}
   - component: {fileID: 7725800662401119924}
   - component: {fileID: 6394062228244938560}
-  - component: {fileID: 828452609411254549}
+  - component: {fileID: 57763573437585188}
   m_Layer: 0
   m_Name: Monster3
   m_TagString: Monster
@@ -67,7 +67,7 @@ Transform:
   m_Children:
   - {fileID: 6928004087235493041}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1414255531177193765
 SpriteRenderer:
@@ -196,6 +196,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atkSound: {fileID: 8300000, guid: 622cdecfcf58444d7be5352e4209020a, type: 3}
+  deadSound: {fileID: 8300000, guid: effe6d71cfa2d4689a4262969473dd08, type: 3}
+  Bullet: {fileID: 3294404223877578590, guid: 2753b4e4b9b50eb4b8232f75b6ad9430, type: 3}
   particlePrefab: {fileID: 7187897924225069257, guid: 2b0060591b69ca94bb3ce7c5b589485f, type: 3}
   type: 3
 --- !u!114 &6394062228244938560
@@ -210,7 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 063199cfa7140bd4892cef33f2e10421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &828452609411254549
+--- !u!114 &57763573437585188
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -219,9 +221,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7835028435146228110}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e67e5c32879b42e48b9344deea0c104a, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f902f5ebe1aec64c8367d784ef1301e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletFabs: {fileID: 3294404223877578590, guid: 2753b4e4b9b50eb4b8232f75b6ad9430, type: 3}
+  trickatkSound: {fileID: 0}
+  Bullet: {fileID: 3294404223877578590, guid: 2753b4e4b9b50eb4b8232f75b6ad9430, type: 3}
   spawnPoint: {fileID: 361688798543618523}
-  atkValue: 0
+  Speed: 3
+  Rotation: 0

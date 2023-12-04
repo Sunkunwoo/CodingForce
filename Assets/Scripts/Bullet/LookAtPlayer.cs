@@ -7,7 +7,7 @@ namespace other
         private void Update()
         {
             // User 태그를 가진 오브젝트를 찾음
-            GameObject userObject = GameObject.FindWithTag("User");
+            GameObject userObject = GameObject.FindWithTag("Player");
 
             if (userObject != null)
             {

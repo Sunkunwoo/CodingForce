@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2046637284486540912}
   - component: {fileID: 5387716531375757199}
   - component: {fileID: 6049352646182557490}
-  - component: {fileID: 6009926933959264427}
+  - component: {fileID: 6717570384737097086}
   m_Layer: 0
   m_Name: Monster
   m_TagString: Monster
@@ -105,7 +105,7 @@ Rigidbody2D:
   m_Mass: 0.1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.01
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -179,8 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 063199cfa7140bd4892cef33f2e10421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: {fileID: 7270107566069893458, guid: f9046819aa53da34c96db6c26a5d25c8, type: 3}
---- !u!114 &6009926933959264427
+--- !u!114 &6717570384737097086
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -189,12 +188,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3564807561173650172}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e67e5c32879b42e48b9344deea0c104a, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e4734b68396b904ca501b771fa07af0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletFabs: {fileID: 3294404223877578590, guid: 2753b4e4b9b50eb4b8232f75b6ad9430, type: 3}
-  spawnPoint: {fileID: 8842729169435709441}
-  atkValue: 0
+  trickatkSound: {fileID: 0}
+  Bullet: {fileID: 3294404223877578590, guid: 2753b4e4b9b50eb4b8232f75b6ad9430, type: 3}
+  spawnPoint: {fileID: 310186431450580736}
 --- !u!1 &6683796583480399042
 GameObject:
   m_ObjectHideFlags: 0

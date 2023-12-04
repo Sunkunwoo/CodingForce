@@ -6,6 +6,9 @@ using UnityEngine;
 public class Info : MonoBehaviour
 {
     public AudioClip atkSound;
+    public AudioClip deadSound;
+
+    public GameObject Bullet;
     public enum CharacterType
     {
         Player,
@@ -26,7 +29,7 @@ public class Info : MonoBehaviour
     private float bulletRpm;
     private CharacterType character;
 
-    public GameObject particlePrefab; // ÆÄÆ¼Å¬ ÇÁ¸®ÆÕÀ» Inspector¿¡¼­ ¼³Á¤
+    public GameObject particlePrefab; // ï¿½ï¿½Æ¼Å¬ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Inspectorï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
     public float MaxHp
     {
@@ -69,14 +72,20 @@ public class Info : MonoBehaviour
         {
             if (Character == CharacterType.Player)
             {
+                if (deadSound != null)
+                {
+                    SoundManager.s.PlayFXSound(deadSound);
+                }
+                else
+                {
+                    Debug.Log("Dead Sound Clip is Null");
+                }
                 GameObject particleEffect = Instantiate(particlePrefab, transform.position, Quaternion.identity);
                 Destroy(gameObject);
                 //GameManager.I.GameOver();
             }
             else
             {
-                GameManager.I.killCount++;
-                GameManager.I.SpwanCount--;
                 OnDeath?.Invoke();
                 Destroy(gameObject);
             }
@@ -84,17 +93,61 @@ public class Info : MonoBehaviour
     }
     public void GetItem(int type)
     {
-        if (type == 0)
-            Hp += 10;
-        else if (type == 1)
-            Atk += 2;
+        if (type == 1)
+        {
+            Debug.Log("Ã¼ï¿½ï¿½ up");
+            Hp += 20;
+            Debug.Log(Hp);
+
+        }
+
         if (type == 2)
-            MoveSpeed += 1;
+        {
+            Debug.Log("ï¿½ï¿½ï¿½Ý·ï¿½ up");
+            Atk += 5;
+            Debug.Log(Atk);
+        }
+
         if (type == 3)
-            BulletRpm += 10;
+        {
+            Debug.Log("ï¿½Óµï¿½ up");
+            BulletRpm += 20;
+            MoveSpeed += 5;
+            Debug.Log(BulletRpm);
+            Debug.Log(MoveSpeed);
+        }
         if (type == 4)
-            Hp += 10;
+        { 
+            Debug.Log("ï¿½Ñ¾ï¿½ + ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
+            GameObject[] mbullet = GameObject.FindGameObjectsWithTag("Mbullet");
+            GameObject[] monster = GameObject.FindGameObjectsWithTag("Monster");
+
+            for (int i = 0; i < mbullet.Length; i++)
+            {
+                Destroy(mbullet[i]);
+            }
+
+            for (int i = 0; i < monster.Length; i++)
+            {
+                Destroy(monster[i]);
+            }
+        }
+
+        if (type == 5)
+        {
+            Debug.Log("5ï¿½Ê°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
+            GameObject shield = transform.GetChild(0).gameObject;
+            shield.SetActive(true);
+            Invoke("ShieldOff", 5f);
+        }
 
     }
+
+    public void ShieldOff()
+    {
+        GameObject shield = transform.GetChild(0).gameObject;
+        shield.SetActive(false);
+    }
+
 
 }
