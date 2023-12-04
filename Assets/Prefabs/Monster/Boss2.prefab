@@ -47,9 +47,10 @@ GameObject:
   - component: {fileID: 3948011316281818970}
   - component: {fileID: -842411771383951094}
   - component: {fileID: 4190307850906685297}
+  - component: {fileID: 3372212635690887424}
   m_Layer: 0
   m_Name: Boss2
-  m_TagString: Monster
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -197,6 +198,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atkSound: {fileID: 8300000, guid: 622cdecfcf58444d7be5352e4209020a, type: 3}
+  deadSound: {fileID: 8300000, guid: 39d95322e08d84fc88a217e689779f38, type: 3}
+  Bullet: {fileID: 0}
   particlePrefab: {fileID: 7187897924225069257, guid: 2b0060591b69ca94bb3ce7c5b589485f, type: 3}
   type: 7
 --- !u!114 &3948011316281818970
@@ -240,3 +243,16 @@ MonoBehaviour:
   trickatkSound: {fileID: 0}
   Bullet: {fileID: 0}
   spawnPoint: {fileID: 0}
+  Speed: 3
+--- !u!114 &3372212635690887424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6916174699615346598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70d2d80e97cbbf74b828c7b1ed864b94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

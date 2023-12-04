@@ -195,7 +195,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cc1e6ee2c4fbc74d8c3a501444cb7f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkSound: {fileID: 0}
+  atkSound: {fileID: 8300000, guid: 094c3c6c93b1049099a8b1a7e972b40a, type: 3}
+  deadSound: {fileID: 8300000, guid: 1dc177c9d0d8347d0b0a178593807e77, type: 3}
+  Bullet: {fileID: 0}
   particlePrefab: {fileID: 7187897924225069257, guid: 2b0060591b69ca94bb3ce7c5b589485f, type: 3}
 --- !u!114 &5929840311418839224
 MonoBehaviour:

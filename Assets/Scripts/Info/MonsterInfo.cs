@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MonsterInfo : Info
 {
@@ -104,6 +105,37 @@ public class MonsterInfo : Info
             // Atk 값을 전달하여 탄알 발사
             bulletSpawner.Shoot(Atk);
             SoundManager.s.PlayFXSound(atkSound);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (deadSound != null)
+        {
+            SoundManager.s.PlayFXSound(deadSound);
+        }
+        else
+        {
+            Debug.Log("Dead Sound Clip is Null");
+        }
+        GameManager.I.killCount++;
+        GameManager.I.SpwanCount--;
+        Debug.Log("killCount: " + GameManager.I.killCount);
+        Debug.Log("SpwanCount: " + GameManager.I.SpwanCount);
+        switch(type)
+        {
+            case CharacterType.Boss1:
+                GameManager.I.clearCheck = true;
+                GameManager.I.stage = 2;
+                break;
+            case CharacterType.Boss2:
+                GameManager.I.clearCheck = true;
+                GameManager.I.stage = 3;
+                break;
+            case CharacterType.Boss3:
+                GameManager.I.clearCheck = true;
+                GameManager.I.stage = 4;
+                break;
         }
     }
 

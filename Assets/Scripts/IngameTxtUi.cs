@@ -22,7 +22,7 @@ public class IngameTxtUi : MonoBehaviour
         if (player != null)
         {
             stageTxt.text = "Stage" + GameManager.I.stage.ToString();
-                scoreTxt.text = "Score: " + GameManager.I.sccore.ToString();
+            scoreTxt.text = "Score: " + GameManager.I.sccore.ToString();
             hpTxt.text = "Hp: " + player.GetComponent<PlayerInfo>().Hp.ToString();
         }
     }

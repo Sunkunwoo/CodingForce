@@ -6,6 +6,8 @@ using UnityEngine;
 public class Info : MonoBehaviour
 {
     public AudioClip atkSound;
+    public AudioClip deadSound;
+
     public GameObject Bullet;
     public enum CharacterType
     {
@@ -70,14 +72,20 @@ public class Info : MonoBehaviour
         {
             if (Character == CharacterType.Player)
             {
+                if (deadSound != null)
+                {
+                    SoundManager.s.PlayFXSound(deadSound);
+                }
+                else
+                {
+                    Debug.Log("Dead Sound Clip is Null");
+                }
                 GameObject particleEffect = Instantiate(particlePrefab, transform.position, Quaternion.identity);
                 Destroy(gameObject);
                 //GameManager.I.GameOver();
             }
             else
             {
-                GameManager.I.killCount++;
-                GameManager.I.SpwanCount--;
                 OnDeath?.Invoke();
                 Destroy(gameObject);
             }

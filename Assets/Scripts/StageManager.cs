@@ -40,6 +40,21 @@ public class StageManager : MonoBehaviour
         Instantiate(ObjectSpawner);
     }
 
+    private void Update()
+    {
+        if (GameManager.I.clearCheck == true)
+        {
+            txtUi.SetActive(true);
+            Time.timeScale = 0f;
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                Time.timeScale = 1f;
+                GameManager.I.clearCheck = false;
+                SceneManager.LoadScene("Stage" + GameManager.I.stage);
+            }
+        }
+    }
+
     void Spawns()
     {
         if (GameManager.I.SpwanCount < 10)
@@ -76,7 +91,7 @@ public class StageManager : MonoBehaviour
             }
 
         }
-        else;
+        else
         {
             Debug.Log("생성 제한 초과");
         }
@@ -85,14 +100,7 @@ public class StageManager : MonoBehaviour
 
     void ClearStage()
     {
-        if(stageNumber != GameManager.I.stage)
-        {
-            txtUi.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.Return))
-            {
-                SceneManager.LoadScene("LOBBY");
-            }
-        }
+
     }
 
 }
