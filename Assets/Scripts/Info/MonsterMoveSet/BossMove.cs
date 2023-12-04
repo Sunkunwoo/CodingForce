@@ -4,55 +4,48 @@ using UnityEngine;
 
 public class BossMove : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-    public string targetATag = "BmoveTA";
-    public string targetBTag = "BmoveTB";
-
-    private Transform currentTarget;
+    public float moveSpeed;
+    public Vector3 originalPosition; // 원래 좌표
+    public Vector3 targetPosition;   // 특정 좌표
+    private bool movingToTarget = true;
 
     void Start()
     {
-        // 초기 목표를 A로 설정
-        currentTarget = FindTarget(targetATag);
+        moveSpeed=GetComponent<Info>().MoveSpeed;
+        // 초기 목표를 특정 좌표로 설정
+        targetPosition = new Vector3(9f, 5f, 0f);
+        originalPosition = new Vector3(-9f, 5f, 0f);
     }
 
     void Update()
     {
-        // 현재 목표 방향으로 이동
+        // 현재 좌표에서 목표 좌표로 부드럽게 이동
         MoveObject();
-
-        // 목표에 도달했는지 확인하고, 도달하면 목표를 교체
-        if (Vector3.Distance(transform.position, currentTarget.position) < 0.1f)
-        {
-            SwitchTarget();
-        }
     }
 
     void MoveObject()
     {
-        transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
-    }
-
-    void SwitchTarget()
-    {
-        // 현재 목표가 A면 B로, B면 A로 변경
-        if (currentTarget.CompareTag(targetATag))
+        // 특정 좌표로 이동 중이면
+        if (movingToTarget)
         {
-            currentTarget = FindTarget(targetBTag);
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+
+            // 특정 좌표에 도착하면 원래 좌표로 이동할 것임을 표시
+            if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
+            {
+                movingToTarget = false;
+            }
         }
+        // 원래 좌표로 이동 중이면
         else
         {
-            currentTarget = FindTarget(targetATag);
+            transform.position = Vector3.MoveTowards(transform.position, originalPosition, moveSpeed * Time.deltaTime);
+
+            // 원래 좌표에 도착하면 특정 좌표로 이동할 것임을 표시
+            if (Vector3.Distance(transform.position, originalPosition) < 0.1f)
+            {
+                movingToTarget = true;
+            }
         }
-
-        // 이동 방향을 새로운 목표로 설정
-        transform.forward = (currentTarget.position - transform.position).normalized;
-    }
-
-    Transform FindTarget(string tag)
-    {
-        // 주어진 태그를 가진 GameObject를 찾아서 반환
-        GameObject targetObject = GameObject.FindGameObjectWithTag(tag);
-        return targetObject != null ? targetObject.transform : null;
     }
 }
