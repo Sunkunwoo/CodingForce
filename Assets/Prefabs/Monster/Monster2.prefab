@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 4014606368208910448}
   - component: {fileID: 4644181437248007378}
   - component: {fileID: -4144631815446689724}
+  - component: {fileID: -4631741869258062046}
   m_Layer: 0
   m_Name: Monster2
   m_TagString: Monster
@@ -229,3 +230,15 @@ MonoBehaviour:
   spawnPoint: {fileID: 1693142676578554644}
   Speed: 3
   Target: {fileID: 6687497773147704054, guid: c2fbab5853e963941ac6446b711028ac, type: 3}
+--- !u!114 &-4631741869258062046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7384675972166586126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8ebb2b31292e3a47ad853fb3e87d312, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

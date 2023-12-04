@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerBulletSpwan : MonoBehaviour
+public class BulletSpwan : MonoBehaviour
 {
     float atk;
     float rpm;
@@ -13,6 +13,7 @@ public class PlayerBulletSpwan : MonoBehaviour
         atk = GetComponent<Info>().Atk;
         rpm = GetComponent<Info>().BulletRpm;
         atkSound = GetComponent<Info>().atkSound;
+        StartCoroutine(ShootProjectiles());
     }
 
     // Update is called once per frame

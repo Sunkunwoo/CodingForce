@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 7725800662401119924}
   - component: {fileID: 6394062228244938560}
   - component: {fileID: 57763573437585188}
+  - component: {fileID: -2320027988341313953}
   m_Layer: 0
   m_Name: Monster3
   m_TagString: Monster
@@ -229,3 +230,15 @@ MonoBehaviour:
   spawnPoint: {fileID: 361688798543618523}
   Speed: 3
   Rotation: 0
+--- !u!114 &-2320027988341313953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7835028435146228110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8ebb2b31292e3a47ad853fb3e87d312, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
