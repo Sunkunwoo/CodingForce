@@ -66,8 +66,8 @@ public class ItemData : MonoBehaviour
                 }
                 else if (gameObject == Kiwi)
                 {
-                    other.GetComponent<Info>().BulletRpm += 5;
-                    other.GetComponent<Info>().MoveSpeed += 5;
+                    other.GetComponent<Info>().BulletRpm += 10;
+                    other.GetComponent<Info>().MoveSpeed += 50;
                 }
                 else if (gameObject == Pineapple)
                 {
