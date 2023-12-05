@@ -7,7 +7,7 @@ public class IngameTxtUi : MonoBehaviour
     public TextMeshProUGUI scoreTxt;
     public TextMeshProUGUI hpTxt;
     public TextMeshProUGUI stageTxt;
-    public GameObject player; // GameObject Å¸ÀÔÀ¸·Î º¯°æ
+    public GameObject player; // GameObject Å¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
     private void Start()
     {
@@ -41,7 +41,7 @@ public class IngameTxtUi : MonoBehaviour
     //}
     //void OnDestroy()
     //{
-    //    // ÄÄÆ÷³ÍÆ®°¡ ÆÄ±«µÉ ¶§ ÀÌº¥Æ®¿¡¼­ ¸Þ¼­µå Á¦°Å
+    //    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ìºï¿½Æ®ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     //    SceneManager.sceneLoaded -= OnSceneLoadedUi;
     //}
 }

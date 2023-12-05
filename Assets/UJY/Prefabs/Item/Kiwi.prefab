@@ -166,4 +166,5 @@ MonoBehaviour:
   Kiwi: {fileID: 2025522947727327946}
   Pineapple: {fileID: 5947074191372668158, guid: b16a9243ff9508f47a33f3b45a399959, type: 3}
   Melon: {fileID: 5634722634605835825, guid: 720776e482aafc74a8aba8c129007b2a, type: 3}
+  Shield: {fileID: 1738545585370638084, guid: 6e6290acb65a1834ba5cfb9f00627b17, type: 3}
   getSound: {fileID: 8300000, guid: 76827b774477f4a30816b9316be1c941, type: 3}

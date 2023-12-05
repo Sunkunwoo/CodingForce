@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
 
 public class MonsterBulletController : BulletController
@@ -25,5 +26,16 @@ public class MonsterBulletController : BulletController
                 Debug.LogError("'Player' 태그를 가진 객체에서 Info 컴포넌트를 찾을 수 없습니다.");
             }
         }
+
+        if (other.gameObject.tag == "Shield")
+        {
+            Destroy(gameObject);
+        }
+
+
     }
+
+
+
+
 }

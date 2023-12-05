@@ -13,6 +13,7 @@ TagManager:
   - BmoveTA
   - BmoveTB
   - PlayerBullet
+  - Shield
   layers:
   - Default
   - TransparentFX
