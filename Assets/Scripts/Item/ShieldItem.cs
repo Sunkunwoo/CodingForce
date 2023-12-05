@@ -24,10 +24,11 @@ public class ShieldItem : MonoBehaviour
             if(shieldCollider.enabled == false)
             {
                 shieldCollider.enabled = !shieldCollider.enabled;
+                spriteRenderer.color = new Color(200 / 255, 255 / 255, 255 / 255, 255 / 255);
+                Destroy(coll.gameObject);
+                Invoke("ShieldOff", 5f);
             }
-            spriteRenderer.color = new Color(200 / 255, 255 / 255, 255 / 255, 255 / 255);
-            Destroy(coll.gameObject);
-            Invoke("ShieldOff", 5f);
+
         }
 
         if (coll.CompareTag("Mbullet"))

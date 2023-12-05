@@ -23,9 +23,9 @@ public class IngameTxtUi : MonoBehaviour
             stageTxt.text = "Stage" + GameManager.I.stage.ToString();
             scoreTxt.text = "Score: " + GameManager.I.sccore.ToString();
             hpTxt.text = "Hp: " + player.GetComponent<PlayerInfo>().Hp.ToString();
-            hpTxt.text = "Atk: " + player.GetComponent<PlayerInfo>().Atk.ToString();
-            hpTxt.text = "Speed: " + player.GetComponent<PlayerInfo>().MoveSpeed.ToString();
-            hpTxt.text = "RPM: " + player.GetComponent<PlayerInfo>().BulletRpm.ToString();
+            atkTxt.text = "Atk: " + player.GetComponent<PlayerInfo>().Atk.ToString();
+            speedTxt.text = "Speed: " + player.GetComponent<PlayerInfo>().MoveSpeed.ToString();
+            rpmTxt.text = "RPM: " + player.GetComponent<PlayerInfo>().BulletRpm.ToString();
         }
     }
 }

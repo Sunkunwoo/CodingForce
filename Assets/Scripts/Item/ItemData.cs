@@ -16,7 +16,6 @@ public class ItemData : MonoBehaviour
     public AudioClip getSound;
 
 
-    SpriteRenderer spriteRenderer;
     //public AudioClip ItemSound;
 
 
