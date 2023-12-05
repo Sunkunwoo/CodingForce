@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5387716531375757199}
   - component: {fileID: 6049352646182557490}
   - component: {fileID: 6717570384737097086}
+  - component: {fileID: -4307461625853002579}
   m_Layer: 0
   m_Name: Monster
   m_TagString: Monster
@@ -165,6 +166,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atkSound: {fileID: 8300000, guid: 622cdecfcf58444d7be5352e4209020a, type: 3}
+  deadSound: {fileID: 0}
+  Bullet: {fileID: 0}
   particlePrefab: {fileID: 7187897924225069257, guid: 2b0060591b69ca94bb3ce7c5b589485f, type: 3}
   type: 1
 --- !u!114 &6049352646182557490
@@ -194,6 +197,19 @@ MonoBehaviour:
   trickatkSound: {fileID: 0}
   Bullet: {fileID: 3294404223877578590, guid: 2753b4e4b9b50eb4b8232f75b6ad9430, type: 3}
   spawnPoint: {fileID: 310186431450580736}
+  Speed: 3
+--- !u!114 &-4307461625853002579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3564807561173650172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a77dbaebefb501449a8ad02cce06466, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6683796583480399042
 GameObject:
   m_ObjectHideFlags: 0
