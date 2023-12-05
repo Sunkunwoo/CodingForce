@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public bool isCheat = false;
     public int killCount= 0;
     public int SpwanCount = 0;
+    public bool bossCheck = false;
 
     public GameObject ingameUiBox; 
     public TextMeshProUGUI gameOverTxt;

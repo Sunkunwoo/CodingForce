@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txtBox: {fileID: 501731474101277430}
-  bossCsv: {fileID: 4900000, guid: d6a3eceb94f263f439b1486955baae0d, type: 3}
+  bossCsv: {fileID: 4900000, guid: ebc3419c7aebedd4ab39cf01a6dd938a, type: 3}
 --- !u!1 &3845044021242459646
 GameObject:
   m_ObjectHideFlags: 0
