@@ -15,7 +15,6 @@ public class BackgroundController : MonoBehaviour
         collider2D = GetComponent<BoxCollider2D>();
         height = collider2D.size.y;
         speed = 1.5f;
-        
     }
 
     // Update is called once per frame
