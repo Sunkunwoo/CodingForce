@@ -230,7 +230,7 @@ MonoBehaviour:
   Bullet: {fileID: 3294404223877578590, guid: 2753b4e4b9b50eb4b8232f75b6ad9430, type: 3}
   spawnPoint: {fileID: 549732429299456837}
   Speed: 3
-  Rotation: 3
+  Rotation: 50
   Vertex: 3
   Subdivision: 3
 --- !u!114 &4033640337000605513

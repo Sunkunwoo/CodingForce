@@ -243,9 +243,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trickatkSound: {fileID: 0}
   Bullet: {fileID: 3294404223877578590, guid: 2753b4e4b9b50eb4b8232f75b6ad9430, type: 3}
-  spawnPoint: {fileID: 0}
+  spawnPoint: {fileID: 1526022500013444285}
   Speed: 3
-  Target: {fileID: 0}
+  Target: {fileID: 6687497773147704054, guid: c2fbab5853e963941ac6446b711028ac, type: 3}
 --- !u!114 &-4775468584488413318
 MonoBehaviour:
   m_ObjectHideFlags: 0

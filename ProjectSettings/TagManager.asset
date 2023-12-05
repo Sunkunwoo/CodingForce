@@ -12,6 +12,8 @@ TagManager:
   - Boss
   - BmoveTA
   - BmoveTB
+  - PlayerBullet
+  - Shield
   layers:
   - Default
   - TransparentFX

@@ -7,13 +7,14 @@ public class IngameTxtUi : MonoBehaviour
     public TextMeshProUGUI scoreTxt;
     public TextMeshProUGUI hpTxt;
     public TextMeshProUGUI stageTxt;
-    public GameObject player; // GameObject Å¸ÀÔÀ¸·Î º¯°æ
+    public GameObject player; // GameObject Å¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
     private void Start()
     {
-        DontDestroyOnLoad(this.gameObject);
-        SceneManager.sceneLoaded += OnSceneLoadedUi;
-        gameObject.SetActive(false);
+        player = GameObject.FindWithTag("Player");
+        //DontDestroyOnLoad(this.gameObject);
+        //SceneManager.sceneLoaded += OnSceneLoadedUi;
+        //gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -27,20 +28,20 @@ public class IngameTxtUi : MonoBehaviour
         }
     }
 
-    void OnSceneLoadedUi(Scene scene, LoadSceneMode mode)
-    {
-        if (scene.name == "Lobby" || scene.name == "Ending")
-        {
-            gameObject.SetActive(false);
-        }
-        else
-        {
-            gameObject.SetActive(true);
-        }
-    }
-    void OnDestroy()
-    {
-        // ÄÄÆ÷³ÍÆ®°¡ ÆÄ±«µÉ ¶§ ÀÌº¥Æ®¿¡¼­ ¸Þ¼­µå Á¦°Å
-        SceneManager.sceneLoaded -= OnSceneLoadedUi;
-    }
+    //void OnSceneLoadedUi(Scene scene, LoadSceneMode mode)
+    //{
+    //    if (scene.name == "Lobby" || scene.name == "Ending")
+    //    {
+    //        gameObject.SetActive(false);
+    //    }
+    //    else
+    //    {
+    //        gameObject.SetActive(true);
+    //    }
+    //}
+    //void OnDestroy()
+    //{
+    //    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ìºï¿½Æ®ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    //    SceneManager.sceneLoaded -= OnSceneLoadedUi;
+    //}
 }

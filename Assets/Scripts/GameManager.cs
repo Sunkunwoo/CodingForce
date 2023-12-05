@@ -1,6 +1,8 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,28 +14,41 @@ public class GameManager : MonoBehaviour
     public int SpwanCount = 0;
     public bool bossCheck = false;
 
+    public GameObject player;
     public GameObject ingameUiBox; 
-    public TextMeshProUGUI gameOverTxt;
+    public GameObject gameOverBox;
 
     public static GameManager I;
 
     void Awake()
     {
+        if(I != null)
+        {
+            Destroy(this.gameObject);
+        }
         I = this;
         DontDestroyOnLoad(this.gameObject);
+
+    }
+    private void Start()
+    {
+        Instantiate(player);
+        Instantiate(ingameUiBox);
     }
 
     public void GameOver()
     {
-        gameOverTxt.gameObject.SetActive(true);
+        Instantiate(gameOverBox);
         Time.timeScale = 0f;
     }
 
     public void RetryBtn()
     {
+        Time.timeScale = 1f;
         Destroy(ingameUiBox);
         SceneManager.LoadScene("Title");
-        Time.timeScale = 1f;
+        Instantiate(player);
+        Instantiate(ingameUiBox);
     }
 
 }

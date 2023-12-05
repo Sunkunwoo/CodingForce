@@ -12,6 +12,7 @@ public class StageManager : MonoBehaviour
     public GameObject txtUi;
     public GameObject ObjectSpawner;
     public GameObject MousePointer;
+    public GameObject GamaUi;
     float spwanTime;
     int stageNumber;
     int targetKill;
@@ -19,6 +20,7 @@ public class StageManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Instantiate(GamaUi);
         GameManager.I.killCount = 0;
         stageNumber = GameManager.I.stage;
         switch (stageNumber)
