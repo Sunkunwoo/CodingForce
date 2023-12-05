@@ -113,7 +113,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Sprite: {fileID: 3440381276690965280, guid: f32d96da99383db498b3d92d10c5259e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -245,7 +245,6 @@ MonoBehaviour:
   Bullet: {fileID: 3294404223877578590, guid: 2753b4e4b9b50eb4b8232f75b6ad9430, type: 3}
   spawnPoint: {fileID: 1526022500013444285}
   Speed: 3
-  Target: {fileID: 6687497773147704054, guid: c2fbab5853e963941ac6446b711028ac, type: 3}
 --- !u!114 &-4775468584488413318
 MonoBehaviour:
   m_ObjectHideFlags: 0
