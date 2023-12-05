@@ -17,11 +17,6 @@ public class ItemData : MonoBehaviour
     static GameObject Shield;
     public AudioClip getSound;
 
-    private float changeSpeed = 60;
-    float tt = 0;
-    bool change = false;
-
-
     SpriteRenderer spriteRenderer;
     //public AudioClip ItemSound;
 
@@ -88,8 +83,7 @@ public class ItemData : MonoBehaviour
                 {
                     Debug.Log("½¯µå»ý¼º");
                     Shield.SetActive(true);
-                    Invoke("ChangeAlphaCoroution", 5f);
-                    Invoke("ShieldOff", 10f);
+                    Invoke("ShieldOff", 7f);
                 }
 
                 Destroy(gameObject);
@@ -114,42 +108,12 @@ public class ItemData : MonoBehaviour
 
     }
 
-        
-
     void ShieldOff()
-    {
+    {      
         Debug.Log("½¯µåÁ¾·á");
         Shield.SetActive(false);
     }
 
-    IEnumerator ChangeAlphaCoroution()
-    {
-        while (true)
-        {
-            if (!change)
-            {
-                tt += 1;
-
-                if (tt >= changeSpeed)
-                {
-                    change = true;
-                }
-            }
-            else
-            {
-                tt -= 1;
-
-                if (tt <= 0)
-                {
-                    change = false;
-                }
-            }
-
-            spriteRenderer.color = new Color(200/255, 255/255, 255/255, tt / changeSpeed);
-
-            yield return new WaitForSeconds(0.01f);
-        }
-    }
-
+    
 
 }
