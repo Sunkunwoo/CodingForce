@@ -12,6 +12,7 @@ TagManager:
   - Boss
   - BmoveTA
   - BmoveTB
+  - Shield
   layers:
   - Default
   - TransparentFX

@@ -11,7 +11,9 @@ public class ItemData : MonoBehaviour
     public GameObject Kiwi;
     public GameObject Pineapple;
     public GameObject Melon;
+    static GameObject Shield;
     public AudioClip getSound;
+
 
     //public AudioClip ItemSound;
 
@@ -21,8 +23,13 @@ public class ItemData : MonoBehaviour
         float x = Random.Range(-8f, 8f);
         float y = 4;
         transform.position = new Vector3(x, y, 0);
+        if(Shield == null)
+        {
+            Shield = GameObject.FindGameObjectWithTag("Shield");
+            Shield.SetActive(false);
+        }
 
-    }
+    }   
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -37,18 +44,43 @@ public class ItemData : MonoBehaviour
             {
                 Debug.Log("get Sound is Null");
             }
+
             if (playerInfo != null)
             {
                 if (gameObject == Apple)
-                    playerInfo.GetItem(1);
+                {
+                    other.GetComponent<Info>().Hp += 20;
+                }
                 else if (gameObject == Banana)
-                    playerInfo.GetItem(2);
+                {
+                    other.GetComponent<Info>().Atk += 5;
+                }
                 else if (gameObject == Kiwi)
-                    playerInfo.GetItem(3);
+                {
+                    other.GetComponent<Info>().BulletRpm += 5;
+                    other.GetComponent<Info>().MoveSpeed += 5;
+                }
                 else if (gameObject == Pineapple)
-                    playerInfo.GetItem(4);
+                {
+                    GameObject[] mbullet = GameObject.FindGameObjectsWithTag("Mbullet");
+                    GameObject[] monster = GameObject.FindGameObjectsWithTag("Monster");
+
+                    for (int i = 0; i < mbullet.Length; i++)
+                    {
+                        Destroy(mbullet[i]);
+                    }
+
+                    for (int i = 0; i < monster.Length; i++)
+                    {
+                        Destroy(monster[i]);
+                    }
+                }
                 else if (gameObject == Melon)
-                    playerInfo.GetItem(5);
+                {
+                    Debug.Log("½¯µå»ý¼º");
+                    Shield.SetActive(true);
+                    Invoke("ShieldOff", 5f);
+                }
 
                 Destroy(gameObject);
 
@@ -70,6 +102,11 @@ public class ItemData : MonoBehaviour
             Destroy(gameObject);
         }
 
+    }
+
+    public void ShieldOff()
+    {
+        Shield.SetActive(false);
     }
 
 
