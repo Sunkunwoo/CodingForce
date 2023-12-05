@@ -5,7 +5,6 @@ using System.Drawing;
 using Unity.VisualScripting;
 using UnityEngine;
 using static Info;
-using Color = UnityEngine.Color;
 
 public class ItemData : MonoBehaviour
 {
@@ -14,12 +13,7 @@ public class ItemData : MonoBehaviour
     public GameObject Kiwi;
     public GameObject Pineapple;
     public GameObject Melon;
-    static GameObject Shield;
     public AudioClip getSound;
-
-    private float changeSpeed = 60;
-    float tt = 0;
-    bool change = false;
 
 
     SpriteRenderer spriteRenderer;
@@ -31,13 +25,7 @@ public class ItemData : MonoBehaviour
         float x = Random.Range(-8f, 8f);
         float y = 4;
         transform.position = new Vector3(x, y, 0);
-        if(Shield == null)
-        {
-            Shield = GameObject.FindGameObjectWithTag("Shield");
-            spriteRenderer = Shield.GetComponent<SpriteRenderer>();
-            spriteRenderer.color = new Color(200 / 255, 255 / 255, 255 / 255, 255 / 255);
-            Shield.SetActive(false);
-        }
+  
     }   
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -66,8 +54,8 @@ public class ItemData : MonoBehaviour
                 }
                 else if (gameObject == Kiwi)
                 {
-                    other.GetComponent<Info>().BulletRpm += 5;
-                    other.GetComponent<Info>().MoveSpeed += 5;
+                    other.GetComponent<Info>().BulletRpm += 10;
+                    other.GetComponent<Info>().MoveSpeed += 50;
                 }
                 else if (gameObject == Pineapple)
                 {
@@ -83,12 +71,6 @@ public class ItemData : MonoBehaviour
                     {
                         Destroy(monster[i]);
                     }
-                }
-                else if (gameObject == Melon)
-                {
-                    Debug.Log("½¯µå»ý¼º");
-                    Shield.SetActive(true);
-                    Invoke("ShieldOff", 10f);
                 }
 
                 Destroy(gameObject);
@@ -111,15 +93,6 @@ public class ItemData : MonoBehaviour
             Destroy(gameObject);
         }
 
-    }
-
-        
-
-    void ShieldOff()
-    {
-        Debug.Log("½¯µåÁ¾·á");
-        Shield.SetActive(false);
-    }
-
+    }      
 
 }
