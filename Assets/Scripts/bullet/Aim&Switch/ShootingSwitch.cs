@@ -3,9 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneSwitchHandler : MonoBehaviour
+public class ShootingSwitch : MonoBehaviour
 {
-    private void OnShootActivator()
+    private bool isEnabled = true;
+
+    public void SwitchEnableScript(bool enable)
+    {
+        isEnabled = enable;
+    }
+    public void OnShootActivator()
     {
         Debug.Log("dasboots");
         // PlayerShoot 스크립트를 찾기

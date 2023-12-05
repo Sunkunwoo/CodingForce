@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 602090127993060741}
   - component: {fileID: 7055413109490714133}
   - component: {fileID: -4118839275039832455}
+  - component: {fileID: -5122949283039480587}
   m_Layer: 0
   m_Name: Monster Bullet
   m_TagString: Mbullet
@@ -163,3 +164,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dmg: 0
   speed: 10
+--- !u!114 &-5122949283039480587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3294404223877578590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19bbaa0802cb1404bb18ec44d6d1e5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

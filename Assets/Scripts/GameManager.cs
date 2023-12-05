@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public int stage=1;
     public int sccore=0;
     public bool isCheat = false;
+    public bool isColored = false;
     public int killCount= 0;
     public int SpwanCount = 0;
     public bool bossCheck = false;
