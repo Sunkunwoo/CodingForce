@@ -12,7 +12,6 @@ public class CircleShotGotoShoot : ShootManager
     public Transform Target;
     private const int DegreesPerIteration = 13;
     private Vector3 TargetPosition;
-    private Transform targetInstance;
 
     private void Update()
     {

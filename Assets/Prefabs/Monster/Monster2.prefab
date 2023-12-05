@@ -45,8 +45,8 @@ GameObject:
   - component: {fileID: 3992729967779576508}
   - component: {fileID: 4014606368208910448}
   - component: {fileID: 4644181437248007378}
-  - component: {fileID: -4144631815446689724}
   - component: {fileID: -4631741869258062046}
+  - component: {fileID: -6434365581678674621}
   m_Layer: 0
   m_Name: Monster2
   m_TagString: Monster
@@ -213,23 +213,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 063199cfa7140bd4892cef33f2e10421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-4144631815446689724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7384675972166586126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdba24569f388644caf72cd138027744, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trickatkSound: {fileID: 0}
-  Bullet: {fileID: 3294404223877578590, guid: 2753b4e4b9b50eb4b8232f75b6ad9430, type: 3}
-  spawnPoint: {fileID: 1693142676578554644}
-  Speed: 3
-  Target: {fileID: 6687497773147704054, guid: c2fbab5853e963941ac6446b711028ac, type: 3}
 --- !u!114 &-4631741869258062046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,3 +225,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8ebb2b31292e3a47ad853fb3e87d312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-6434365581678674621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7384675972166586126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53aec63a9fd4c674ebdd3c9a68800f4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trickatkSound: {fileID: 0}
+  Bullet: {fileID: 3294404223877578590, guid: 2753b4e4b9b50eb4b8232f75b6ad9430, type: 3}
+  spawnPoint: {fileID: 1693142676578554644}
+  Speed: 0
+  InitialRotation: 0
+  NumVertices: 3
+  SubdivisionFactor: 3
