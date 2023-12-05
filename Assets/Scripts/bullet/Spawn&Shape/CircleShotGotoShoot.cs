@@ -9,17 +9,9 @@ using static UnityEngine.GraphicsBuffer;
 
 public class CircleShotGotoShoot : ShootManager
 {
-    public Transform Target;
-    private const int DegreesPerIteration = 13;
+    private const int DegreesPerIteration = 20;
     private Vector3 TargetPosition;
 
-    private void Update()
-    {
-        if (Target != null)
-        {
-            TargetPosition = Target.position;
-        }
-    }
     public override void Shoot(float atk)
     {
         SoundManager.s.PlayFXSound(trickatkSound);
@@ -55,6 +47,7 @@ public class CircleShotGotoShoot : ShootManager
         {
             if (obj != null)
             {
+                TargetPosition.x = UnityEngine.Random.Range(-8.8f, 8.8f);
                 Vector3 targetDirection = TargetPosition - obj.position;
                 float angle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
                 obj.rotation = Quaternion.Euler(0, 0, angle);

@@ -14,9 +14,8 @@ public class ItemSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("MakeItem", 0, 1f);
-        InvokeRepeating("MakeItem", 0, 1f);
-        InvokeRepeating("MakeItem", 0, 1f);
+        InvokeRepeating("MakeItem", 0, 5f);
+
     }
 
     // Update is called once per frame

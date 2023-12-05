@@ -199,6 +199,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6155835fd063b0745b5a7b0702dec1e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BossBgImg: {fileID: 508951443}
+  BossBgImg2: {fileID: 210665904}
 --- !u!212 &210665907
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -239,9 +241,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -5
+  m_SortingOrder: -4
   m_Sprite: {fileID: 21300000, guid: 1efc14524702f8c4694fc4697517592f, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -524,6 +526,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6155835fd063b0745b5a7b0702dec1e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BossBgImg: {fileID: 508951443}
+  BossBgImg2: {fileID: 210665904}
 --- !u!212 &508951446
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -564,9 +568,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -5
+  m_SortingOrder: -4
   m_Sprite: {fileID: 21300000, guid: 1efc14524702f8c4694fc4697517592f, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -667,6 +671,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6155835fd063b0745b5a7b0702dec1e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BossBgImg: {fileID: 508951443}
+  BossBgImg2: {fileID: 210665904}
 --- !u!212 &842689087
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -709,7 +715,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -5
   m_Sprite: {fileID: 21300000, guid: cbef2fb8d44aed94297177261be84de5, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -810,6 +816,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6155835fd063b0745b5a7b0702dec1e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BossBgImg: {fileID: 508951443}
+  BossBgImg2: {fileID: 210665904}
 --- !u!212 &862486489
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -852,7 +860,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -5
   m_Sprite: {fileID: 21300000, guid: cbef2fb8d44aed94297177261be84de5, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1094,9 +1102,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2046701592}
     - target: {fileID: 1964176610388800044, guid: 8fb5b0038001310488924c2367cb9b91, type: 3}
+      propertyPath: BossBgImg
+      value: 
+      objectReference: {fileID: 508951443}
+    - target: {fileID: 1964176610388800044, guid: 8fb5b0038001310488924c2367cb9b91, type: 3}
       propertyPath: bossSpwan
       value: 
       objectReference: {fileID: 7264316864896476374, guid: 1573c14c606c2fa489ee4894428105b1, type: 3}
+    - target: {fileID: 1964176610388800044, guid: 8fb5b0038001310488924c2367cb9b91, type: 3}
+      propertyPath: BossBgImg2
+      value: 
+      objectReference: {fileID: 210665904}
     - target: {fileID: 1964176610388800044, guid: 8fb5b0038001310488924c2367cb9b91, type: 3}
       propertyPath: MousePointer
       value: 

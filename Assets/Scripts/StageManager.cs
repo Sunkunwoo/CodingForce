@@ -13,6 +13,7 @@ public class StageManager : MonoBehaviour
     public GameObject ObjectSpawner;
     public GameObject MousePointer;
     public GameObject GamaUi;
+
     float spwanTime;
     int stageNumber;
     int targetKill;
