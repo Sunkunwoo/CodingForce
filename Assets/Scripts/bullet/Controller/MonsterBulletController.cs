@@ -27,11 +27,6 @@ public class MonsterBulletController : BulletController
             }
         }
 
-        if (other.gameObject.tag == "Shield")
-        {
-            Destroy(gameObject);
-        }
-
 
     }
 
