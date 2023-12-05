@@ -14,6 +14,7 @@ public class IngameTxtUi : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
         SceneManager.sceneLoaded += OnSceneLoadedUi;
         gameObject.SetActive(false);
+        player.SetActive(false);
     }
 
     // Update is called once per frame

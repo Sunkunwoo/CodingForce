@@ -31,7 +31,7 @@ public abstract class ShootManager : MonoBehaviour
                 bulletController.Speed = speed;
             }
 
-            Destroy(bullet, 2f);
+            Destroy(bullet, 5f);
         }
     }
 }

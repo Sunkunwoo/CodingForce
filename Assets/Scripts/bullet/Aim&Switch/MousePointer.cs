@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class MousePointer : MonoBehaviour
 {
+    private void Start()
+    {
+        Cursor.visible = false;
+        DontDestroyOnLoad(this.gameObject);
+    }
+
     void Update()
     {
         // 현재 마우스 위치를 가져오기

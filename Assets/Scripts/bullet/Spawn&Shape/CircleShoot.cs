@@ -3,7 +3,7 @@
 
 public class CircleShoot : ShootManager
 {
-    private const int DegreesPerIteration = 13;
+    private const int DegreesPerIteration = 15;
 
     public override void Shoot(float atk)
     {

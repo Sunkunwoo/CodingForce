@@ -7,11 +7,6 @@ public class BulletAim : MonoBehaviour
     [SerializeField] private Transform Aim;
     [SerializeField] private Transform playerTransform;
 
-    private void Start()
-    {
-        Cursor.visible = false;
-    }
-
     void Update()
     {
         // 플레이어의 위치를 기준으로 마우스의 스크린 좌표를 월드 좌표로 변환
