@@ -55,7 +55,14 @@ public class StageManager : MonoBehaviour
             {
                 Time.timeScale = 1f;
                 GameManager.I.clearCheck = false;
-                SceneManager.LoadScene("Stage" + GameManager.I.stage);
+                if (GameManager.I.stage < 4)
+                {
+                    SceneManager.LoadScene("Stage" + GameManager.I.stage);
+                }
+                else
+                {
+                    SceneManager.LoadScene("Ending");
+                }
             }
         }
     }
@@ -66,37 +73,23 @@ public class StageManager : MonoBehaviour
         {
             if (GameManager.I.killCount <= targetKill)
             {
-                int spawnsDice = Random.Range(1, 10);
-                switch (spawnsDice)
-                {
-                    case 1:
-                    case 2:
-                    case 3:
-                        GameManager.I.SpwanCount++;
-                        Instantiate(spwanMonster);
-                        break;
-                    case 4:
-                    case 5:
-                    case 6:
-                        GameManager.I.SpwanCount++;
-                        Instantiate(spwanMonster2);
-                        break;
-                    case 7:
-                    case 8:
-                    case 9:
-                        GameManager.I.SpwanCount++;
-                        Instantiate(spwanMonster3);
-                        break;
-                    default:
-                        Debug.Log("디폴트");
-                        break;
-                }
+                MonsterSpwanDice();
             }
             else
             {
+                if (GameManager.I.bossCheck == false)
+                {
+                    Instantiate(bossSpwan);
+                }
+                else
+                {
+                    MonsterSpwanDice();
+                }
                 GameManager.I.bossCheck = true;
-                Instantiate(bossSpwan);
-                CancelInvoke("Spawns");
+                if (GameManager.I.stage <= 2)
+                {
+                    CancelInvoke("Spawns");
+                }
             }
 
         }
@@ -105,6 +98,35 @@ public class StageManager : MonoBehaviour
             Debug.Log("생성 제한 초과");
         }
 
+    }
+
+    void MonsterSpwanDice()
+    {
+        int spawnsDice = Random.Range(1, 10);
+        switch (spawnsDice)
+        {
+            case 1:
+            case 2:
+            case 3:
+                GameManager.I.SpwanCount++;
+                Instantiate(spwanMonster);
+                break;
+            case 4:
+            case 5:
+            case 6:
+                GameManager.I.SpwanCount++;
+                Instantiate(spwanMonster2);
+                break;
+            case 7:
+            case 8:
+            case 9:
+                GameManager.I.SpwanCount++;
+                Instantiate(spwanMonster3);
+                break;
+            default:
+                Debug.Log("디폴트");
+                break;
+        }
     }
 
 }
