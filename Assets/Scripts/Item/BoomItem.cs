@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class BoomItem : MonoBehaviour
 {
-    public GameObject Pineapple;
-
+    GameObject boom;
     // Start is called before the first frame update
     void Start()
     {
-
+        boom = transform.GetChild(2).gameObject;
     }
 
     private void OnTriggerEnter2D(Collider2D coll)
     {
-        if (coll.gameObject == Pineapple)
+        if (coll.gameObject.tag == "Boom")
         {
+            Debug.Log("ºÕ¿Â");
+            boom.SetActive(true);
+            Invoke("BoomOff", 2f);
             GameObject[] mbullet = GameObject.FindGameObjectsWithTag("Mbullet");
             GameObject[] monster = GameObject.FindGameObjectsWithTag("Monster");
 
@@ -29,8 +31,14 @@ public class BoomItem : MonoBehaviour
                 Destroy(monster[i]);
             }
 
-            Destroy(Pineapple);
+            Destroy(coll.gameObject);
         }
 
+    }
+
+    private void BoomOff()
+    {
+        Debug.Log("ºÕ¿ÀÇÁ");
+        boom.SetActive(false);
     }
 }
