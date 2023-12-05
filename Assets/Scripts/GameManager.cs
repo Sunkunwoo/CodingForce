@@ -33,7 +33,6 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Instantiate(player);
-        Instantiate(ingameUiBox);
     }
 
     public void GameOver()
@@ -48,7 +47,6 @@ public class GameManager : MonoBehaviour
         Destroy(ingameUiBox);
         SceneManager.LoadScene("Title");
         Instantiate(player);
-        Instantiate(ingameUiBox);
     }
 
 }
