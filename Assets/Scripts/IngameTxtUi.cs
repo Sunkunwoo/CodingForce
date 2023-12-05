@@ -11,9 +11,10 @@ public class IngameTxtUi : MonoBehaviour
 
     private void Start()
     {
-        DontDestroyOnLoad(this.gameObject);
-        SceneManager.sceneLoaded += OnSceneLoadedUi;
-        gameObject.SetActive(false);
+        player = GameObject.FindWithTag("Player");
+        //DontDestroyOnLoad(this.gameObject);
+        //SceneManager.sceneLoaded += OnSceneLoadedUi;
+        //gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -27,20 +28,20 @@ public class IngameTxtUi : MonoBehaviour
         }
     }
 
-    void OnSceneLoadedUi(Scene scene, LoadSceneMode mode)
-    {
-        if (scene.name == "Lobby" || scene.name == "Ending")
-        {
-            gameObject.SetActive(false);
-        }
-        else
-        {
-            gameObject.SetActive(true);
-        }
-    }
-    void OnDestroy()
-    {
-        // 컴포넌트가 파괴될 때 이벤트에서 메서드 제거
-        SceneManager.sceneLoaded -= OnSceneLoadedUi;
-    }
+    //void OnSceneLoadedUi(Scene scene, LoadSceneMode mode)
+    //{
+    //    if (scene.name == "Lobby" || scene.name == "Ending")
+    //    {
+    //        gameObject.SetActive(false);
+    //    }
+    //    else
+    //    {
+    //        gameObject.SetActive(true);
+    //    }
+    //}
+    //void OnDestroy()
+    //{
+    //    // 컴포넌트가 파괴될 때 이벤트에서 메서드 제거
+    //    SceneManager.sceneLoaded -= OnSceneLoadedUi;
+    //}
 }

@@ -49,3 +49,6 @@ MonoBehaviour:
   spwanMonster3: {fileID: 0}
   bossSpwan: {fileID: 0}
   txtUi: {fileID: 0}
+  ObjectSpawner: {fileID: 0}
+  MousePointer: {fileID: 0}
+  GamaUi: {fileID: 4145223470026301480, guid: 10e4101c369ccc84cad7e8f367f09df6, type: 3}

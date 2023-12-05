@@ -72,7 +72,7 @@ public class MonsterInfo : Info
                 MaxHp = 250;
                 Hp = MaxHp;
                 Atk = 15;
-                MoveSpeed = 20;
+                MoveSpeed = 10;
                 BulletRpm = 120;
                 addScore = 200;
                 break;
@@ -80,7 +80,7 @@ public class MonsterInfo : Info
                 MaxHp = 300;
                 Hp = MaxHp;
                 Atk = 20;
-                MoveSpeed = 25;
+                MoveSpeed = 10;
                 BulletRpm = 120;
                 addScore = 300;
                 break;
