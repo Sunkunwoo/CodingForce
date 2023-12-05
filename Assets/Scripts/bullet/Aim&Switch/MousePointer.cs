@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MousePointer : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class MousePointer : MonoBehaviour
     {
         Cursor.visible = false;
         DontDestroyOnLoad(this.gameObject);
+        SceneManager.sceneLoaded += PointerDestory;
     }
 
     void Update()
@@ -20,5 +22,13 @@ public class MousePointer : MonoBehaviour
 
         // 마우스 포인터를 마우스 위치로 이동
         transform.position = new Vector3(mousePosition.x, mousePosition.y, 0);
+    }
+
+    void PointerDestory(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "Title")
+        {
+            Destroy(gameObject);
+        }
     }
 }

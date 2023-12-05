@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public int stage=1;
     public int sccore=0;
     public bool isCheat = false;
+    public bool isColored = false;
     public int killCount= 0;
     public int SpwanCount = 0;
     public bool bossCheck = false;
@@ -22,18 +23,19 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        if(I != null)
+        if (I != null && I != this)
         {
             Destroy(this.gameObject);
         }
-        I = this;
-        DontDestroyOnLoad(this.gameObject);
-
+        else
+        {
+            I = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
     }
     private void Start()
     {
         Instantiate(player);
-        Instantiate(ingameUiBox);
     }
 
     public void GameOver()
@@ -48,7 +50,6 @@ public class GameManager : MonoBehaviour
         Destroy(ingameUiBox);
         SceneManager.LoadScene("Title");
         Instantiate(player);
-        Instantiate(ingameUiBox);
     }
 
 }

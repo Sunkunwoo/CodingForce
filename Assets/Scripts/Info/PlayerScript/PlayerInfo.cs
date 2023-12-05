@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerInfo : Info
 {
-    void Start()
+    void Awake()
     {
         if (GameManager.I.isCheat == false)
         {
@@ -27,7 +27,10 @@ public class PlayerInfo : Info
         }
         DontDestroyOnLoad(this.gameObject);
     }
-
+    private void Start()
+    {
+        gameObject.SetActive(false);
+    }
     private void OnDestroy()
     {
         if (deadSound != null)
