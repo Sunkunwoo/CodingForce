@@ -7,10 +7,13 @@ public class ShieldItem : MonoBehaviour
 {
     private CircleCollider2D shieldCollider;
     SpriteRenderer spriteRenderer;
+    private bool ShieldBool = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        ShieldBool = false;
+
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         shieldCollider = gameObject.GetComponent<CircleCollider2D>();
         spriteRenderer.color = new Color(200 / 255, 255 / 255, 255 / 255, 0 / 255);
@@ -21,20 +24,17 @@ public class ShieldItem : MonoBehaviour
         if (coll.gameObject.tag == "Shield")
         {
             Debug.Log("½¯µå¿Â");
-            if(shieldCollider.enabled == false)
-            {
-                shieldCollider.enabled = !shieldCollider.enabled;
-                spriteRenderer.color = new Color(200 / 255, 255 / 255, 255 / 255, 255 / 255);
-                Destroy(coll.gameObject);
-                Invoke("ShieldOff", 5f);
-            }
+            ShieldBool = true;
+            spriteRenderer.color = new Color(200 / 255, 255 / 255, 255 / 255, 255 / 255);
+            Destroy(coll.gameObject);
+            Invoke("ShieldOff", 5f);
 
         }
 
         if (coll.CompareTag("Mbullet"))
         {
             Rigidbody2D bulletRb = coll.GetComponent<Rigidbody2D>();
-            if(bulletRb != null && shieldCollider.enabled == true)
+            if(bulletRb != null && ShieldBool == true)
             {
                 Debug.Log("ÃÑ¾Ë»èÁ¦");
                 Destroy(coll.gameObject);
@@ -48,7 +48,7 @@ public class ShieldItem : MonoBehaviour
     private void ShieldOff()
     {
         Debug.Log("½¯µå¿ÀÇÁ");
-        shieldCollider.enabled = !shieldCollider.enabled;
+        ShieldBool = false;
         spriteRenderer.color = new Color(200 / 255, 255 / 255, 255 / 255, 0 / 255);
     }
 

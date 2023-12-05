@@ -14,6 +14,7 @@ TagManager:
   - BmoveTB
   - PlayerBullet
   - Shield
+  - Boom
   layers:
   - Default
   - TransparentFX
