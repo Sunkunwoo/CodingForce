@@ -88,7 +88,6 @@ public class ItemData : MonoBehaviour
                 {
                     Debug.Log("½¯µå»ý¼º");
                     Shield.SetActive(true);
-                    Invoke("ChangeAlphaCoroution", 5f);
                     Invoke("ShieldOff", 10f);
                 }
 
@@ -120,35 +119,6 @@ public class ItemData : MonoBehaviour
     {
         Debug.Log("½¯µåÁ¾·á");
         Shield.SetActive(false);
-    }
-
-    IEnumerator ChangeAlphaCoroution()
-    {
-        while (true)
-        {
-            if (!change)
-            {
-                tt += 1;
-
-                if (tt >= changeSpeed)
-                {
-                    change = true;
-                }
-            }
-            else
-            {
-                tt -= 1;
-
-                if (tt <= 0)
-                {
-                    change = false;
-                }
-            }
-
-            spriteRenderer.color = new Color(200/255, 255/255, 255/255, tt / changeSpeed);
-
-            yield return new WaitForSeconds(0.01f);
-        }
     }
 
 
