@@ -1,8 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Drawing;
+using Unity.VisualScripting;
 using UnityEngine;
 using static Info;
+using Color = UnityEngine.Color;
 
 public class ItemData : MonoBehaviour
 {
@@ -14,7 +17,12 @@ public class ItemData : MonoBehaviour
     static GameObject Shield;
     public AudioClip getSound;
 
+    private float changeSpeed = 60;
+    float tt = 0;
+    bool change = false;
 
+
+    SpriteRenderer spriteRenderer;
     //public AudioClip ItemSound;
 
 
@@ -26,9 +34,10 @@ public class ItemData : MonoBehaviour
         if(Shield == null)
         {
             Shield = GameObject.FindGameObjectWithTag("Shield");
+            spriteRenderer = Shield.GetComponent<SpriteRenderer>();
+            spriteRenderer.color = new Color(200 / 255, 255 / 255, 255 / 255, 255 / 255);
             Shield.SetActive(false);
         }
-
     }   
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -79,7 +88,8 @@ public class ItemData : MonoBehaviour
                 {
                     Debug.Log("½¯µå»ý¼º");
                     Shield.SetActive(true);
-                    Invoke("ShieldOff", 5f);
+                    Invoke("ChangeAlphaCoroution", 5f);
+                    Invoke("ShieldOff", 10f);
                 }
 
                 Destroy(gameObject);
@@ -104,9 +114,41 @@ public class ItemData : MonoBehaviour
 
     }
 
-    public void ShieldOff()
+        
+
+    void ShieldOff()
     {
+        Debug.Log("½¯µåÁ¾·á");
         Shield.SetActive(false);
+    }
+
+    IEnumerator ChangeAlphaCoroution()
+    {
+        while (true)
+        {
+            if (!change)
+            {
+                tt += 1;
+
+                if (tt >= changeSpeed)
+                {
+                    change = true;
+                }
+            }
+            else
+            {
+                tt -= 1;
+
+                if (tt <= 0)
+                {
+                    change = false;
+                }
+            }
+
+            spriteRenderer.color = new Color(200/255, 255/255, 255/255, tt / changeSpeed);
+
+            yield return new WaitForSeconds(0.01f);
+        }
     }
 
 
