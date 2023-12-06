@@ -163,6 +163,12 @@ MonoBehaviour:
   - {fileID: 2058312427}
   - {fileID: 666762127}
   - {fileID: 214456675}
+  characterSprites:
+  - {fileID: -6367560908665664636, guid: ea058266d4b405b4797befa0e78fa2b5, type: 3}
+  - {fileID: -6367560908665664636, guid: c8541a9af851a6f40b3555bc89e3fc7a, type: 3}
+  - {fileID: -6367560908665664636, guid: 82cd76fe644d13f47889099c3e30d78c, type: 3}
+  - {fileID: -6367560908665664636, guid: dd20e32a46f0d07419f78c94dba11394, type: 3}
+  - {fileID: -6367560908665664636, guid: fdbea49a42c84884499bbbfc6a85c0c7, type: 3}
 --- !u!95 &28034581
 Animator:
   serializedVersion: 5
@@ -336,6 +342,12 @@ MonoBehaviour:
   - {fileID: 2058312427}
   - {fileID: 666762127}
   - {fileID: 214456675}
+  characterSprites:
+  - {fileID: -6367560908665664636, guid: ea058266d4b405b4797befa0e78fa2b5, type: 3}
+  - {fileID: -6367560908665664636, guid: c8541a9af851a6f40b3555bc89e3fc7a, type: 3}
+  - {fileID: -6367560908665664636, guid: 82cd76fe644d13f47889099c3e30d78c, type: 3}
+  - {fileID: -6367560908665664636, guid: dd20e32a46f0d07419f78c94dba11394, type: 3}
+  - {fileID: -6367560908665664636, guid: fdbea49a42c84884499bbbfc6a85c0c7, type: 3}
 --- !u!95 &214456676
 Animator:
   serializedVersion: 5
@@ -469,51 +481,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!1 &337505344
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 337505345}
-  - component: {fileID: 337505346}
-  m_Layer: 0
-  m_Name: DataManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &337505345
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 337505344}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.25, y: -1.9099998, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &337505346
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 337505344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113d49b650f2c5041b5a1c8aa1f361a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentCharacter: 0
 --- !u!1 &504792369
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,13 +577,44 @@ RectTransform:
   m_Children:
   - {fileID: 1352478126}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &511050855
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 511050856}
+  m_Layer: 0
+  m_Name: Rangers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &511050856
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511050855}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &666762126
 GameObject:
   m_ObjectHideFlags: 0
@@ -657,6 +655,12 @@ MonoBehaviour:
   - {fileID: 2058312427}
   - {fileID: 666762127}
   - {fileID: 214456675}
+  characterSprites:
+  - {fileID: -6367560908665664636, guid: ea058266d4b405b4797befa0e78fa2b5, type: 3}
+  - {fileID: -6367560908665664636, guid: c8541a9af851a6f40b3555bc89e3fc7a, type: 3}
+  - {fileID: -6367560908665664636, guid: 82cd76fe644d13f47889099c3e30d78c, type: 3}
+  - {fileID: -6367560908665664636, guid: dd20e32a46f0d07419f78c94dba11394, type: 3}
+  - {fileID: -6367560908665664636, guid: fdbea49a42c84884499bbbfc6a85c0c7, type: 3}
 --- !u!95 &666762128
 Animator:
   serializedVersion: 5
@@ -1095,6 +1099,12 @@ MonoBehaviour:
   - {fileID: 2058312427}
   - {fileID: 666762127}
   - {fileID: 214456675}
+  characterSprites:
+  - {fileID: -6367560908665664636, guid: ea058266d4b405b4797befa0e78fa2b5, type: 3}
+  - {fileID: -6367560908665664636, guid: c8541a9af851a6f40b3555bc89e3fc7a, type: 3}
+  - {fileID: -6367560908665664636, guid: 82cd76fe644d13f47889099c3e30d78c, type: 3}
+  - {fileID: -6367560908665664636, guid: dd20e32a46f0d07419f78c94dba11394, type: 3}
+  - {fileID: -6367560908665664636, guid: fdbea49a42c84884499bbbfc6a85c0c7, type: 3}
 --- !u!61 &1346184709
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1545,6 +1555,12 @@ MonoBehaviour:
   - {fileID: 2058312427}
   - {fileID: 666762127}
   - {fileID: 214456675}
+  characterSprites:
+  - {fileID: -6367560908665664636, guid: ea058266d4b405b4797befa0e78fa2b5, type: 3}
+  - {fileID: -6367560908665664636, guid: c8541a9af851a6f40b3555bc89e3fc7a, type: 3}
+  - {fileID: -6367560908665664636, guid: 82cd76fe644d13f47889099c3e30d78c, type: 3}
+  - {fileID: -6367560908665664636, guid: dd20e32a46f0d07419f78c94dba11394, type: 3}
+  - {fileID: -6367560908665664636, guid: fdbea49a42c84884499bbbfc6a85c0c7, type: 3}
 --- !u!95 &2058312428
 Animator:
   serializedVersion: 5
