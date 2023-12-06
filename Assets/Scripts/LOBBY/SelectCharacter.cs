@@ -33,7 +33,7 @@ public class SelectCharacter : MonoBehaviour
             if (chars[i] != this)
                 chars[i].OnDeSelect();
         }
-        GameManager.I.player.GetComponent<SpriteRenderer>().sprite = characterSprites[(int)character];
+        GameManager.I.player.GetComponent<SpriteRenderer>().sprite = characterSprites[(int)GameManager.I.currentCharacter];
     }
     private void OnDeSelect()
     {
