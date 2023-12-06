@@ -328,8 +328,6 @@ GameObject:
   - component: {fileID: 5929840311418839224}
   - component: {fileID: 8265478183506313180}
   - component: {fileID: 6717726301835877100}
-  - component: {fileID: 8299356721227358812}
-  - component: {fileID: -899565718753483652}
   - component: {fileID: 2978504443755396599}
   - component: {fileID: 5978812349819844926}
   m_Layer: 0
@@ -398,7 +396,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 3440381276690965280, guid: f32d96da99383db498b3d92d10c5259e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -558,32 +556,6 @@ MonoBehaviour:
   Bullet: {fileID: 3294404223877578590, guid: a02e015b9add3ea459fa71de876f826a, type: 3}
   spawnPoint: {fileID: 6687497773147704054}
   atkValue: 0
---- !u!114 &8299356721227358812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8469582998675087407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f15d5b4b8c794e74aacf4ac879d3e7db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Aim: {fileID: 6687497773147704054}
-  playerTransform: {fileID: 6687497773147704054}
---- !u!114 &-899565718753483652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8469582998675087407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8ebb2b31292e3a47ad853fb3e87d312, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2978504443755396599
 MonoBehaviour:
   m_ObjectHideFlags: 0
