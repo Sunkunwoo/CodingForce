@@ -8,7 +8,7 @@ public class StraightShoot : ShootManager
     protected override void Start()
     {
         rpm = GetComponent<Info>().BulletRpm;
-        Speed = 3f;
+        Speed = 10f;
         trickatkSound = GetComponent<Info>().atkSound;
         InvokeRepeating("Shoot", 0f, rpm);
     }

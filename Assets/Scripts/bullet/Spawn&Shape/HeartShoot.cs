@@ -22,7 +22,7 @@ public class HeartShoot : ShootManager
         {
             for (int i = 0; i < 34; i += 1)
             {
-                SpawnBullet(spawnPoint.position, Quaternion.Euler(0, 0, _direction[i] + Rotation), atk, _speeds[i] / 50);
+                SpawnBullet(spawnPoint.position, Quaternion.Euler(0, 0, _direction[i] + Rotation), atk, _speeds[i]/20);
             }
         }
     }

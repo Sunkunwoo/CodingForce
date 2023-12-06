@@ -26,6 +26,10 @@ public class ShapeShooter : ShootManager
         InitialRotation = UnityEngine.Random.Range(0f, 360f);
         NumVertices = UnityEngine.Random.Range(3, 8);
         SubdivisionFactor = UnityEngine.Random.Range(1f, 6f);
+        if (Bullet == null || spawnPoint == null)
+        {
+            return;
+        }
         InitializeShape();
     }
 
@@ -56,7 +60,6 @@ public class ShapeShooter : ShootManager
                     );
 
                     SpawnBullet(spawnPoint.position, Quaternion.Euler(0, 0, direction), atk, Speed);
-
                     direction += 360 / NumVertices;
                 }
             }
