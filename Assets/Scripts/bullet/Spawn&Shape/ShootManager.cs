@@ -12,7 +12,7 @@ public abstract class ShootManager : MonoBehaviour
     {
         Speed = 10.0f;
         trickatkSound = GetComponent<Info>().atkSound;
-        InvokeRepeating("Shoot", 0f, 2f);
+        InvokeRepeating("Shoot", 0f, 10f);
     }
 
     public abstract void Shoot(float atk);
