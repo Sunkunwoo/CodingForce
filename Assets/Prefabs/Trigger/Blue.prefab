@@ -16,13 +16,12 @@ GameObject:
   - component: {fileID: 4691024503142070925}
   - component: {fileID: 2629002894640707226}
   - component: {fileID: 301327384553009300}
-  - component: {fileID: 341825042397870143}
   - component: {fileID: 9084773233358441338}
   - component: {fileID: 3233791095064600137}
   - component: {fileID: 8262495469605137623}
   m_Layer: 0
   m_Name: Blue
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40,7 +39,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3539465955456560292
 SpriteRenderer:
@@ -240,18 +239,6 @@ MonoBehaviour:
   Bullet: {fileID: 3294404223877578590, guid: a02e015b9add3ea459fa71de876f826a, type: 3}
   spawnPoint: {fileID: 0}
   atkValue: 0
---- !u!114 &341825042397870143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 230344416810057588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2dca70c24407c94cb50509cbf7787d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &9084773233358441338
 MonoBehaviour:
   m_ObjectHideFlags: 0
