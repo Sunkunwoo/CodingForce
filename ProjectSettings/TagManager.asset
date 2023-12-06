@@ -15,6 +15,7 @@ TagManager:
   - PlayerBullet
   - Shield
   - Boom
+  - Item
   layers:
   - Default
   - TransparentFX

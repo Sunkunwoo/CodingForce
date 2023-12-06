@@ -41,7 +41,7 @@ public class StageManager : MonoBehaviour
         }
         InvokeRepeating("Spawns", 0.5f, spwanTime);
         InvokeRepeating("ClearStage", 0, 1f);
-        Instantiate(ObjectSpawner);
+        //Instantiate(ObjectSpawner);
         Instantiate(MousePointer);
     }
 
@@ -52,12 +52,13 @@ public class StageManager : MonoBehaviour
             txtUi.SetActive(true);
             Time.timeScale = 0f;
             if (Input.GetKeyDown(KeyCode.Return))
-            {
+            {   
                 Time.timeScale = 1f;
                 GameManager.I.clearCheck = false;
                 if (GameManager.I.stage < 4)
                 {
                     SceneManager.LoadScene("Stage" + GameManager.I.stage);
+                    Instantiate(ObjectSpawner);
                 }
                 else
                 {
