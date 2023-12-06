@@ -34,10 +34,6 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(this.gameObject);
         }
     }
-    private void Start()
-    {
-        Instantiate(player);
-    }
 
     public void GameOver()
     {
