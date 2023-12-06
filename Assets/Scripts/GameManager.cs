@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
 
     public void RetryBtn()
     {
+        stage = 1;
         Time.timeScale = 1f;
         Destroy(ingameUiBox);
         SceneManager.LoadScene("Title");
