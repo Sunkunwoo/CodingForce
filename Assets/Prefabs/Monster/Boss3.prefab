@@ -2334,7 +2334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27200cdbf2c4a3747b627b2bb3f0a2be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 51a4f1157b7ff1449b5e5cf064d584c7, type: 3}
+  audioClip: {fileID: 8300000, guid: 1f2ad53bacc245642854dbdc8ea71a9b, type: 3}
   objectTagToDelete: BgmPlayer
 --- !u!114 &737739697911082123
 MonoBehaviour:
