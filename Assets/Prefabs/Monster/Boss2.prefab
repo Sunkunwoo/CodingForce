@@ -130,9 +130,9 @@ GameObject:
   - component: {fileID: 7826937770086764656}
   - component: {fileID: 3948011316281818970}
   - component: {fileID: -842411771383951094}
-  - component: {fileID: 4190307850906685297}
   - component: {fileID: 5170421991029953476}
   - component: {fileID: -39509921066758989}
+  - component: {fileID: 4800133977352955849}
   m_Layer: 0
   m_Name: Boss2
   m_TagString: Boss
@@ -314,22 +314,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 51a4f1157b7ff1449b5e5cf064d584c7, type: 3}
   objectTagToDelete: BgmPlayer
---- !u!114 &4190307850906685297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6916174699615346598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e4734b68396b904ca501b771fa07af0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trickatkSound: {fileID: 0}
-  Bullet: {fileID: 0}
-  spawnPoint: {fileID: 0}
-  Speed: 3
 --- !u!114 &5170421991029953476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,3 +338,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8ebb2b31292e3a47ad853fb3e87d312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4800133977352955849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6916174699615346598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53aec63a9fd4c674ebdd3c9a68800f4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trickatkSound: {fileID: 8300000, guid: 854fa7e18326a472db0df6c83381c7b1, type: 3}
+  Bullet: {fileID: 3294404223877578590, guid: 2753b4e4b9b50eb4b8232f75b6ad9430, type: 3}
+  spawnPoint: {fileID: 800602620026685887}
+  Speed: 0
+  InitialRotation: 0
+  NumVertices: 3
+  SubdivisionFactor: 3
