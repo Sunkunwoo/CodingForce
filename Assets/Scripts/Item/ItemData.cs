@@ -45,14 +45,17 @@ public class ItemData : MonoBehaviour
             {
                 if (gameObject == Apple)
                 {
+                    GetItemText.GT.TextOn(1);
                     other.GetComponent<Info>().Hp += 20;
                 }
                 else if (gameObject == Banana)
                 {
+                    GetItemText.GT.TextOn(2);
                     other.GetComponent<Info>().Atk += 5;
                 }
                 else if (gameObject == Kiwi)
                 {
+                    GetItemText.GT.TextOn(3);
                     other.GetComponent<Info>().BulletRpm += 10;
                     other.GetComponent<Info>().MoveSpeed += 50;
                 }
@@ -72,9 +75,9 @@ public class ItemData : MonoBehaviour
                     }
                 }
 
+
                 Destroy(gameObject);
 
-                Debug.Log("æ∆¿Ã≈€ »πµÊ");
             }
             else
             {

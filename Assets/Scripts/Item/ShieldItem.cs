@@ -23,7 +23,7 @@ public class ShieldItem : MonoBehaviour
     {
         if (coll.gameObject.tag == "Shield")
         {
-            Debug.Log("½¯µå¿Â");
+            GetItemText.GT.TextOn(5);
             ShieldBool = true;
             spriteRenderer.color = new Color(200 / 255, 255 / 255, 255 / 255, 255 / 255);
             Destroy(coll.gameObject);
@@ -36,7 +36,6 @@ public class ShieldItem : MonoBehaviour
             Rigidbody2D bulletRb = coll.GetComponent<Rigidbody2D>();
             if(bulletRb != null && ShieldBool == true)
             {
-                Debug.Log("ÃÑ¾Ë»èÁ¦");
                 Destroy(coll.gameObject);
             }
 
@@ -47,7 +46,6 @@ public class ShieldItem : MonoBehaviour
 
     private void ShieldOff()
     {
-        Debug.Log("½¯µå¿ÀÇÁ");
         ShieldBool = false;
         spriteRenderer.color = new Color(200 / 255, 255 / 255, 255 / 255, 0 / 255);
     }

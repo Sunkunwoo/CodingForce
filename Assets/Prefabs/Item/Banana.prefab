@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 3896038704095290780}
   - component: {fileID: 8701331606960141849}
   m_Layer: 0
-  m_Name: Bananas
-  m_TagString: Untagged
+  m_Name: Banana
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,7 +42,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 342697243859752344}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -166,5 +166,4 @@ MonoBehaviour:
   Kiwi: {fileID: 2025522947727327946, guid: c196f7fad5429074fabc118f46e3892a, type: 3}
   Pineapple: {fileID: 5634722634605835825, guid: 720776e482aafc74a8aba8c129007b2a, type: 3}
   Melon: {fileID: 5634722634605835825, guid: 720776e482aafc74a8aba8c129007b2a, type: 3}
-  Shield: {fileID: 1738545585370638084, guid: 6e6290acb65a1834ba5cfb9f00627b17, type: 3}
   getSound: {fileID: 8300000, guid: 76827b774477f4a30816b9316be1c941, type: 3}
