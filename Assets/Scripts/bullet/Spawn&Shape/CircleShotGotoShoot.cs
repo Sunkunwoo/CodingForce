@@ -9,7 +9,7 @@ using static UnityEngine.GraphicsBuffer;
 
 public class CircleShotGotoShoot : ShootManager
 {
-    private const int DegreesPerIteration = 20;
+    private const int DegreesPerIteration = 75;
     private Vector3 TargetPosition;
 
     public override void Shoot(float atk)

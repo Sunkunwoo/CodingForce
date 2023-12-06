@@ -19,13 +19,15 @@ public class PlayerShoot : MonoBehaviour
         }
         else
         {
-            InvokeRepeating("ShootWithAtk", 0f, 0.5f);
+            float interval = 1f / GetComponent<Info>().BulletRpm;
+            InvokeRepeating("ShootWithAtk", 0f, interval);
         }
     }
     private void Start()
     {
+        float interval = 1f / GetComponent<Info>().BulletRpm;
         trickatkSound = GetComponent<Info>().atkSound;
-        InvokeRepeating("ShootWithAtk", 0f, 0.5f);
+        InvokeRepeating("ShootWithAtk", 0f, interval);
     }
     private void ShootWithAtk()
     {

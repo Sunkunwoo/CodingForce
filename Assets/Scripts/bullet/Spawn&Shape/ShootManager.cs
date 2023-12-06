@@ -10,7 +10,7 @@ public abstract class ShootManager : MonoBehaviour
 
     protected virtual void Start()
     {
-        Speed = 3;
+        Speed = 10.0f;
         trickatkSound = GetComponent<Info>().atkSound;
         InvokeRepeating("Shoot", 0f, 2f);
     }
@@ -31,7 +31,7 @@ public abstract class ShootManager : MonoBehaviour
                 bulletController.Speed = speed;
             }
 
-            Destroy(bullet, 5f);
+            Destroy(bullet, 10f);
         }
     }
 }
