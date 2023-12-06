@@ -564,7 +564,8 @@ MonoBehaviour:
   clearCheck: 0
   stage: 1
   sccore: 0
-  isCheat: 0
+  isCheat: 1
+  isColored: 0
   killCount: 0
   SpwanCount: 0
   bossCheck: 0

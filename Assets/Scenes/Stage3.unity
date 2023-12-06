@@ -1061,7 +1061,7 @@ PrefabInstance:
     - target: {fileID: 3099475067025077237, guid: c3ecde31532d9154b9de59b33158fac5, type: 3}
       propertyPath: audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 06906d718be5b6a4cb2df8732bf39832, type: 3}
+      objectReference: {fileID: 8300000, guid: 35967e8a4dfb1664e9b066939272c0a4, type: 3}
     - target: {fileID: 7970130439190196203, guid: c3ecde31532d9154b9de59b33158fac5, type: 3}
       propertyPath: m_Name
       value: BgmPlayer
