@@ -19,6 +19,7 @@ public class PlayerAddHide : MonoBehaviour
         }
         else
         {
+            DisablePlayerShoot();
             EnablePlayerShoot();
             gameObject.SetActive(true);
         }
