@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public GameObject player;
     public GameObject ingameUiBox; 
     public GameObject gameOverBox;
+    public Character currentCharacter;
 
     public static GameManager I;
 
@@ -51,5 +52,4 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Title");
         Instantiate(player);
     }
-
 }

@@ -572,6 +572,7 @@ MonoBehaviour:
   player: {fileID: 8469582998675087407, guid: c2fbab5853e963941ac6446b711028ac, type: 3}
   ingameUiBox: {fileID: 4145223470026301480, guid: 10e4101c369ccc84cad7e8f367f09df6, type: 3}
   gameOverBox: {fileID: 7465437164314229199, guid: 0f46027c648a6da48a9e174c4cf32554, type: 3}
+  currentCharacter: 0
 --- !u!1 &1266229661
 GameObject:
   m_ObjectHideFlags: 0

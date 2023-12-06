@@ -18,14 +18,14 @@ public class SelectCharacter : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
-        if (DataMgr.instance.currentCharacter == character) OnSelect();
+        if (GameManager.I.currentCharacter == character) OnSelect();
         else OnDeSelect();
     }
 
     private void OnMouseUpAsButton() //콜라이더가 아니라서 그럼
     {
         SoundManager.s.PlayFXSound(audioClip);
-        DataMgr.instance.currentCharacter = character;
+        GameManager.I.currentCharacter = character;
         OnSelect();
         for(int i=0; i<chars.Length; i++)
         {
