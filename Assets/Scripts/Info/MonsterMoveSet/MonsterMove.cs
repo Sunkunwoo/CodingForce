@@ -5,8 +5,6 @@ using UnityEngine;
 public class MonsterMove : MonoBehaviour
 {
     float limitY;
-
-    
     void Start()
     {
         limitY = Random.Range(-0.5f, -1.5f);
