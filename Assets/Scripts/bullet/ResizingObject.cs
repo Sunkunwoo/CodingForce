@@ -10,12 +10,10 @@ public class ResizingObject : MonoBehaviour
     public float maxYSize = 9f; // 최대 y 크기
     public float initialResizeSpeed = 1f; // 초기 크기 조절 속도
     public float accelerationRate = 6f; // 크기 조절 속도의 가속도
-    public int repeatCount = 5; // 반복 횟수
 
     private float xResizeSpeed;
     private float yResizeSpeed;
     private bool isGrowing = true;
-    private int currentRepeatCount = 0;
 
     private float originalXSize;
     private float originalYSize;
@@ -55,14 +53,6 @@ public class ResizingObject : MonoBehaviour
 
                 // 랜덤한 다음 색상 설정
                 SetRandomColor();
-
-                currentRepeatCount++;
-
-                if (currentRepeatCount >= repeatCount)
-                {
-                    // 반복 횟수가 지정된 횟수에 도달하면 동작을 중지
-                    enabled = false;
-                }
             }
         }
         else
