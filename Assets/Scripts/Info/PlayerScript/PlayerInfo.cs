@@ -22,7 +22,7 @@ public class PlayerInfo : Info
             Hp = 999999;
             Atk = 100000;
             MoveSpeed = 500;
-            BulletRpm = 300;
+            BulletRpm = 1;
             Character = CharacterType.Player;
         }
         DontDestroyOnLoad(this.gameObject);

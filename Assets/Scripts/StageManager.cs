@@ -66,6 +66,10 @@ public class StageManager : MonoBehaviour
                 }
             }
         }
+        else 
+        {
+            txtUi.SetActive(false);
+        }
     }
 
     void Spawns()
