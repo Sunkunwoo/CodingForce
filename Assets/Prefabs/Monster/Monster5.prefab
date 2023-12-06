@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5846847628341048499}
   - component: {fileID: 4401507260872952996}
   - component: {fileID: -6331228204145052507}
+  - component: {fileID: 99569352921145686}
   m_Layer: 0
   m_Name: Monster5
   m_TagString: Monster
@@ -210,6 +211,18 @@ MonoBehaviour:
   Bullet: {fileID: 3294404223877578590, guid: 2753b4e4b9b50eb4b8232f75b6ad9430, type: 3}
   spawnPoint: {fileID: 8265109958692162486}
   Speed: 0
+--- !u!114 &99569352921145686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3493831812786102705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a77dbaebefb501449a8ad02cce06466, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8264291759893064033
 GameObject:
   m_ObjectHideFlags: 0
