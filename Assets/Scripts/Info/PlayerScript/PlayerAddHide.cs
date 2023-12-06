@@ -17,9 +17,8 @@ public class PlayerAddHide : MonoBehaviour
             DisablePlayerShoot();
             gameObject.SetActive(false);
         }
-        else if(scene.name == "Stage1" || scene.name == "Stage2" || scene.name == "Stage3")
+        else
         {
-            DisablePlayerShoot();
             EnablePlayerShoot();
             gameObject.SetActive(true);
         }
