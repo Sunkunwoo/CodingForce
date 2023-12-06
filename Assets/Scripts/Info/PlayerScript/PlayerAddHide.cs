@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class PlayerAddHide : MonoBehaviour
 {
     // Start is called before the first frame update
-    void OnEnable()
+    void Awake()
     {
         SceneManager.sceneLoaded += OnSceneLoaded; //다른 씬으로 넘어갈때 쓰이는 sceneLoaded가 호추될때 OnSceneLoaded도 호출 
     }
