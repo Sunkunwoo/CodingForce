@@ -15,7 +15,7 @@ public class BoomItem : MonoBehaviour
     {
         if (coll.gameObject.tag == "Boom")
         {
-            Debug.Log("ºÕ¿Â");
+            GetItemText.GT.TextOn(4);
             boom.SetActive(true);
             Invoke("BoomOff", 2f);
             GameObject[] mbullet = GameObject.FindGameObjectsWithTag("Mbullet");
@@ -38,7 +38,6 @@ public class BoomItem : MonoBehaviour
 
     private void BoomOff()
     {
-        Debug.Log("ºÕ¿ÀÇÁ");
         boom.SetActive(false);
     }
 }
