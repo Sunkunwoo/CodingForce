@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndAnimController : MonoBehaviour
 {
@@ -27,11 +28,11 @@ public class EndAnimController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            Debug.Log("Q눌림");
+            Application.Quit();
         }
         else if(Input.GetKeyDown(KeyCode.R))
         {
-            Debug.Log("R눌림");
+            SceneManager.LoadScene("Title");
         }
 
     }

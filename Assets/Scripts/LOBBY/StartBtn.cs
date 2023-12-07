@@ -8,6 +8,7 @@ public class StartBtn : MonoBehaviour
     public AudioClip audioClip;
     public void PressedStartButton()
     {
+        Instantiate(GameManager.I.player);
         SoundManager.s.PlayFXSound(audioClip);
         SceneManager.LoadScene("Stage1");
     }

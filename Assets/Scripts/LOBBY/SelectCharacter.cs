@@ -13,6 +13,7 @@ public class SelectCharacter : MonoBehaviour
     Animator anim;
     SpriteRenderer sprite;
     [SerializeField] SelectCharacter[] chars;
+    [SerializeField] Sprite[] characterSprites;
 
     private void Start()
     {
@@ -32,6 +33,7 @@ public class SelectCharacter : MonoBehaviour
             if (chars[i] != this)
                 chars[i].OnDeSelect();
         }
+        GameManager.I.player.GetComponent<SpriteRenderer>().sprite = characterSprites[(int)GameManager.I.currentCharacter];
     }
     private void OnDeSelect()
     {
