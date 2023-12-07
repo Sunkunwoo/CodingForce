@@ -9,7 +9,6 @@ public class BulletController : MonoBehaviour
 
     private void Start()
     {
-        // 2초 후에 파괴
         Destroy(gameObject, 2f);
     }
 
