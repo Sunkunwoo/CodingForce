@@ -6,7 +6,7 @@ public class PlayerBulletController : BulletController
 {
     public override void MoveBullet()
     {
-        transform.Translate(Vector2.up * (speed * Time.deltaTime), Space.Self);
+        transform.Translate(Vector2.right * (speed * Time.deltaTime), Space.Self);
     }
 
     public override void HandleCollision(Collider2D other)

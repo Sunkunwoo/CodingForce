@@ -20,6 +20,6 @@ public class BulletAim : MonoBehaviour
     {
         float rotZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        Aim.rotation = Quaternion.Euler(0, 0, rotZ-90);
+        Aim.rotation = Quaternion.Euler(0, 0, rotZ);
     }
 }
