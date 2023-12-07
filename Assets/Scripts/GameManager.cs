@@ -44,9 +44,9 @@ public class GameManager : MonoBehaviour
     public void RetryBtn()
     {
         stage = 1;
+        sccore = 0;
         Time.timeScale = 1f;
         Destroy(ingameUiBox);
         SceneManager.LoadScene("Title");
-        Instantiate(player);
     }
 }
