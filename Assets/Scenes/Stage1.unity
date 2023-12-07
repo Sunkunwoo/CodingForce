@@ -374,13 +374,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e6ae650e08d04b418167ce6b3b0e5d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterPrefabs:
-  - {fileID: 230344416810057588, guid: f500ff24832911d4ab4fc9c9d8a15ec5, type: 3}
-  - {fileID: 4192663784244545481, guid: 22d02178c5c8bb0438741b700d8b29db, type: 3}
-  - {fileID: 3091822509669636229, guid: 9dea1d1483974644f9fc3a654843565e, type: 3}
-  - {fileID: 1788464846557020640, guid: 120c1540ea6d5804ea72d7371a380935, type: 3}
-  - {fileID: 5697256453615059136, guid: 7e8a731c0db63ad4cb2d5f6f7506af32, type: 3}
-  player: {fileID: 0}
 --- !u!4 &294567870
 Transform:
   m_ObjectHideFlags: 0
@@ -404,6 +397,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 501731474101277430, guid: f32ebb4dc188d454d83d392e00773c09, type: 3}
+      propertyPath: m_text
+      value: "What am I doing? I don't know... Argh!\r"
+      objectReference: {fileID: 0}
     - target: {fileID: 2996098999898872971, guid: f32ebb4dc188d454d83d392e00773c09, type: 3}
       propertyPath: m_Name
       value: ClearTxtBoxCanvas
@@ -494,6 +491,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3843255950225883092, guid: f32ebb4dc188d454d83d392e00773c09, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6277328203246998612, guid: f32ebb4dc188d454d83d392e00773c09, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+    - target: {fileID: 6277328203246998612, guid: f32ebb4dc188d454d83d392e00773c09, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+    - target: {fileID: 6277328203246998612, guid: f32ebb4dc188d454d83d392e00773c09, type: 3}
+      propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

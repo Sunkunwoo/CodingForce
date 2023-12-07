@@ -497,9 +497,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 501731474101277430, guid: f32ebb4dc188d454d83d392e00773c09, type: 3}
+      propertyPath: m_text
+      value: "No! This money is mine!\r"
+      objectReference: {fileID: 0}
     - target: {fileID: 2996098999898872971, guid: f32ebb4dc188d454d83d392e00773c09, type: 3}
       propertyPath: m_Name
       value: ClearTxtBoxCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2996098999898872971, guid: f32ebb4dc188d454d83d392e00773c09, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3843255950225883092, guid: f32ebb4dc188d454d83d392e00773c09, type: 3}
       propertyPath: m_Pivot.x

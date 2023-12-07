@@ -18,12 +18,12 @@ public class BossDeadText : MonoBehaviour
     private void Awake()
     {
         LoadDataAndRefreshUI();
+        UpdateUI();
 
     }
 
     private void Update()
     {
-        UpdateUI();
     }
 
     public void LoadDataAndRefreshUI()
@@ -49,7 +49,7 @@ public class BossDeadText : MonoBehaviour
         {
             if (GameManager.I.stage - 1 == member.Num)
             {
-                txtBox.text = member.Txt; 
+                txtBox.text = member.Txt;
             }
         }
     }

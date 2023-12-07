@@ -561,8 +561,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fd4d5cebb9281343809804c362c518e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clearCheck: 0
-  stage: 1
+  clearCheck: 1
+  stage: 3
   sccore: 0
   isCheat: 1
   isColored: 0
